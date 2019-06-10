@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5e4d405-998c-4bc8-a0f7-26622d8ef8cd" name="Default Changelist" comment="" />
+    <list default="true" id="e5e4d405-998c-4bc8-a0f7-26622d8ef8cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLcode/KS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLcode/KS.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLcode/KS模板消息.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLcode/KS模板消息.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLcode/基础.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLcode/base.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLcode/预雅培约.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLcode/预雅.sql" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="-718">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SQLcode/KS.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -44,8 +59,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="930" />
-    <option name="y" value="224" />
+    <option name="x" value="106" />
+    <option name="y" value="210" />
     <option name="width" value="1936" />
     <option name="height" value="770" />
   </component>
@@ -65,23 +80,6 @@
               <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
               <item name="远程代码" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
-              <item name="远程代码" type="462c0819:PsiDirectoryNode" />
-              <item name="项目" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
-              <item name="远程代码" type="462c0819:PsiDirectoryNode" />
-              <item name="项目" type="462c0819:PsiDirectoryNode" />
-              <item name="KS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
-              <item name="远程代码" type="462c0819:PsiDirectoryNode" />
-              <item name="项目" type="462c0819:PsiDirectoryNode" />
-              <item name="数据库日志" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -98,10 +96,10 @@
       <recent name="E:\LL\远程仓库\远程代码" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\LL\远程仓库\远程代码" />
       <recent name="E:\LL\远程仓库\远程代码\pythoncode" />
       <recent name="E:\LL\远程仓库\远程代码\项目" />
       <recent name="E:\LL\远程仓库\远程代码\pythoncode\appium代码" />
-      <recent name="E:\LL\远程仓库\远程代码" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -158,11 +156,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="930" y="224" width="1936" height="770" extended-state="0" />
+    <frame x="106" y="210" width="1936" height="770" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13856691" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1670179" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
@@ -170,7 +168,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2389937" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -250,8 +248,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="-718">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLcode/KS.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
