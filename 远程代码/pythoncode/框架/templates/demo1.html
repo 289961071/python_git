@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="../static/assets/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+
+<form id='ddd' action="log">
+    名字:<br>
+    <input type="text" id="mz" name="mz" value="Mickey">
+    <br>
+    密码:<br>
+    <input type="text" id="pwd" name="pwd" value="Mouse">
+    <br>
+    <input type="text" id="bb" name="bb" value={{name1}}>
+    <br>
+    <input id='su' type="button" value="提交">
+    <input id='su1' type="button" value="刷新">
+    <h1>session:{{session.name2}}</h1>
+    <h1 id="ajax1"></h1>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var data1 = {
+            'mz': $('#mz').val(),
+            'pwd': $('#pwd').val()
+        };
+         $("#su1").click(function () {
+            window.location.reload();
+        });
+        $("#su").click(function () {
+            $.ajax({
+                url: '/ll/log',
+                type: 'POST',
+                data: JSON.stringify(data1),
+                // global:false,
+                contentType: "application/json; charset=UTF-8",
+                success: function (data) {
+                    $("#ajax1").text(data['session1']);
+                    alert(data['login']);
+                    $("#bb").val(data['xinxi'])
+                }
+            })
+        });
+
+    })
+</script>
+</body>
+</html>

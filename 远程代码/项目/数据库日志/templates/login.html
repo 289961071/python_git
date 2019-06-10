@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EasyUI Demo L</title>
+    <link rel="stylesheet" type="text/css" href="../static/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../static/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../static/demo.css">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/jquery.easyui.min.js"></script>
+
+</head>
+<body>
+<h2>EasyUI Demo L</h2>
+<div style="margin:20px 0;"></div>
+<div class="easyui-panel" title=‘login’ style="width:100%;max-width:400px;padding:30px 60px;" id="tab1">
+    <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+        <div style="margin-bottom:20px">
+            <input id="user" class="easyui-textbox" name="name" style="width:100%" data-options="label:'User:',required:true" prompt="用户">
+        </div>
+        <div style="margin-bottom:20px">
+            <input id="pwd" type="password" class="easyui-textbox" name="email" style="width:100%"
+                   data-options="label:'Pwd:',required:true,validType:'email'" prompt="密码">
+        </div>
+        <div style="margin-bottom:20px">
+            <input id="bb" class="easyui-textbox" name="message" style="width:100%" data-options="label:'User:',required:true" prompt="返回值信息。">
+
+        </div>
+        <div style="margin-bottom:20px">
+            <select id="xuanze" class="easyui-combobox" name="language" label="Or What:" style="width:100%; text-align:center">
+                <option value="denglu">登录</option>
+                <option value="zhuce">注册</option>
+                <option value="zhuxiao">write off</option>
+            </select>
+        </div>
+    </form>
+    <div style="text-align:center;padding:5px 0">
+        <a id="su" href="javascript:void(0)" class="easyui-linkbutton" style="width:80px">ok</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>
+        <a id="su1" href="javascript:void(0)" class="easyui-linkbutton" style="width:80px">刷新</a>
+    </div>
+    <table id="tb" border="2" style="border-collapse: collapse;width:590px;">
+    </table>
+</div>
+<script>
+    function clearForm() {
+        $('#ff').form('clear');
+    }
+
+    $(document).ready(function () {
+        $("#su1").click(function () {
+            window.location.reload();
+        });
+        $("#su").click(function () {
+            $("#bb").val('正在执行。。。');
+            $("#su").attr("disabled", "disabled");
+            $('#tb tr').remove();
+            var data1 = {
+                'xuanze': $('#xuanze').val(),
+                'user': $('#user').val(),
+                'pwd': $('#pwd').val()
+            };
+            $.ajax({
+                url: '/login',
+                type: 'POST',
+                data: JSON.stringify(data1),
+                contentType: "application/json; charset=UTF-8",
+                success: function (data) {
+                    if (data['d']) {
+                        var d=data['d'];
+                        $("#bbb").val(d);
+                        alert(d);
+                        $("#su").removeAttr('disabled');
+                    } else {
+                        window.location.href = data['url'] + '/' + data['zhanghao']
+                    }
+                },
+                error: function () {
+                    $("#bb").val('执行失败');
+                    $("#su").removeAttr('disabled');
+                    alert(" 数据错误!");
+                }
+            })
+        });
+
+    })
+</script>
+</body>
+</html>

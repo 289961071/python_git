@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fluid Panel - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="../static/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../static/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../static/demo.css">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>{{zhanghao}},您已登陆.</h2>
+<p id="bb"></p>
+<div style="margin:20px 0 10px 0;">
+</div>
+<table id="p" class="easyui-panel" title="项目." style="width:100%;height:200px;padding:10px;border-collapse: inherit;">
+
+    <!--<table id="tb" border="1" style="border-collapse: collapse;width:590px; " >-->
+
+    <!--</table>-->
+</table>
+<div>
+    <input type="button" id="su" value="查询">
+    <input type="button" id="su1" value="刷新" style="margin-left: 50px;margin-top: 10px">
+</div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#su1").click(function () {
+            window.location.reload();
+        });
+        $("#su").click(function () {
+            $("#bb").val('正在执行。。。');
+            $("#su").attr("disabled", "disabled");
+            $('#p tr').remove();
+            var data1 = {
+                'canshu': 10,
+
+            };
+            $.ajax({
+                url: '/shuju',
+                type: 'POST',
+                data: JSON.stringify(data1),
+                contentType: "application/json; charset=UTF-8",
+                success: function (data) {
+                    $("#su").removeAttr('disabled');
+                    var d1 = data['zhi'];
+                    var d2 = data['lie'];
+                    var d3 = data['tiao'];
+                    var d4 = data['d'];
+                    if (d4) {
+                        alert(d4);
+                    } else {
+                        //遍历json数据到表格  新建tr  根据json判断有多少列
+                        for (var i = 0; i <= d3; i++) {
+                            $('#p').append('<tr></tr>');
+                        }
+                        //遍历json数据到表格  列名
+                        // alert(d1[0]);
+                        $.each(d2, function (i, r1) {
+                            var s = "<th align=\"center\">" + r1 + "</th>";
+                            $('#p tr').eq(0).append(s);
+                        });
+                        //遍历json数据到表格   数据
+                        // $('#tb').prepend('<tr></tr>');
+
+                        $.each(d1, function (i, r) {
+                            $.each(r, function (i1, r1) {
+                                var s = "<td  align='center'>" + r1 + "</td>";
+                                $('#p tr').eq(i + 1).append(s);
+                            });
+                        });
+                    }
+                },
+                error: function () {
+                    $("#bb").val('执行失败');
+                    $("#su").removeAttr('disabled');
+                    alert(" 数据错误!");
+                }
+            })
+        });
+
+    })
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>ks修改</title>
+    <script src="../static/assets/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        .big{
+            line-height: 250%;
+        }
+
+    </style>
+</head>
+<body>
+
+<form id='ddd'  class="big">
+    选择:<br>
+    <select id="xuanze" style="width: 100px;height: 30px;" >
+        <option value="zengjia">增加</option>
+        <option value="gengxin">更新</option>
+        <option value="shanchu">删除交易数据</option>
+    </select><br>
+    参数：<br>
+    <input type="text" id="canshu" name="canshu" value="" placeholder="手机号" style="width:100px;height:30px">
+    <br>
+    返回值:<br>
+    <textarea id="bb" name="bb" rows="5" cols="50" placeholder={{name2}}></textarea>
+    <br>
+    <input id='su' type="button" value="提交">
+    <input id='su2' type="submit" value="跳转" style="margin-left: 50px">
+    <input id='su1' type="button" value="刷新" style="margin-left: 50px">
+</form>
+<table id="tb" border="2" style="border-collapse: collapse;width:590px;">
+
+</table>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#su1").click(function () {
+            window.location.reload();
+        });
+        $("#su").click(function () {
+             $("#bb").val('正在执行。。。');
+             $("#su").attr("disabled", "disabled");
+             $('#tb tr').remove();
+            var data1 = {
+                'xuanze': $('#xuanze').val(),
+                'canshu': $('#canshu').val()
+            };
+            $.ajax({
+                url: '/gai',
+                type: 'POST',
+                data: JSON.stringify(data1),
+                contentType: "application/json; charset=UTF-8",
+                success: function (data) {
+                    alert(data);
+                window.location.href=data['r']+'/'+data['c']
+                },
+                error: function () {
+                    alert(" 数据错误!");
+                }
+            })
+        });
+
+    })
+</script>
+</body>
+</html>

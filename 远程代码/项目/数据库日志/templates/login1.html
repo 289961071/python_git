@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap Demo L</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron" style="margin: auto 0; width: 400px;">
+    <div class="container" style="width:400px;">
+        <h4>欢迎登陆页面！</h4>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="firstname" class="col-sm-2 control-label">名字</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="user" placeholder="请输入名字" style="width: 150px;">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="col-sm-2 control-label">姓</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="pwd" placeholder="请输入姓" style="width: 150px;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="disabledTextInput" class="col-sm-2 control-label">反馈</label>
+                <div class="col-sm-10">
+                    <input type="text" id="bb" class="form-control" placeholder="禁止输入" disabled
+                           style="width: 150px;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label" >选择</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="xuanze" style="text-align-last: center;text-align: center; width: 150px;">
+                        <option value="denglu">登录</option>
+                        <option value="zhuce">注册</option>
+                        <option value="zhuxiao">注销</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">请记住我
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="su" type="button" class="btn btn-primary btn-lg">登录</button>
+                    <button id="su1" type="button" class="btn btn-default">刷新</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function clearForm() {
+        $('#ff').form('clear');
+    }
+
+    $(document).ready(function () {
+        $("#su1").click(function () {
+            window.location.reload();
+        });
+        $("#su").click(function () {
+            $("#bb").val('正在执行。。。');
+            $("#su").attr("disabled", "disabled");
+            $('#tb tr').remove();
+            var data1 = {
+                'xuanze': $('#xuanze').val(),
+                'user': $('#user').val(),
+                'pwd': $('#pwd').val()
+            };
+            $.ajax({
+                url: '/login',
+                type: 'POST',
+                data: JSON.stringify(data1),
+                contentType: "application/json; charset=UTF-8",
+                success: function (data) {
+                    if (data['d']) {
+                        var d = data['d'];
+                        $("#bb").val(d);
+                        alert(d);
+                        $("#su").removeAttr('disabled');
+                    } else {
+                        window.location.href = data['url'] + '/' + data['zhanghao']
+                    }
+                },
+                error: function () {
+                    $("#bb").val('执行失败');
+                    $("#su").removeAttr('disabled');
+                    alert(" 数据错误!");
+                }
+            })
+        });
+
+    })
+</script>
+</body>
+</html>

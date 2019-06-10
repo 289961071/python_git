@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dimension</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../static/assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="../static/assets/css/noscript.css"/>
+    </noscript>
+
+</head>
+<body class="is-preload">
+<script src="../static/assets/jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#shuaxin").click(function () {
+            window.location.reload();
+        });
+        $("#tuichu").click(function () {
+            $.ajax({
+                url: "/upload",
+                type: 'POST',
+                data: {name: $('#name').val(), pwd: $('#pwd').val()},
+                success: function (data) {
+                    alert(data['login']);
+                    $("#su1").val(data['name'] + '\n' + data['pwd'] + '\n' + data['login']);
+                    $("#su1").attr('disabled', true);
+                    if (data['login'] == '登录ok') {
+                        alert(data['login']);
+                        var username = data['login'];
+
+                        window.location.href = "http://localhost:5000/ll/" + data['name'];
+                    }
+                }
+            })
+        });
+    })
+</script>
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <img src="../static/images/c.png" height="100%"/>
+            <!-- <span class="icon fa-diamond"></span> -->
+        </div>
+        <div class="content">
+            <div class="inner">
+                <h1 id="myname">{{name1}} </h1>
+                <h1 id="myname2">{{request.cookies.get('username')}} </h1>
+                <br/>
+                <p>查看自己的邮件 <a href="https://exmail.qq.com">腾讯邮箱</a></p>
+                <p>有问题可以刷新 <input type="button" value="刷新" id="shuaxin"></p>
+                <p>不保留可以退出 <input type="button" value="刷新" id="tuichu"></p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#intro" name="about1" onclick="play12()">pending</a></li>
+                <li><a href="#work" name="about1" onclick="play11()">function</a></li>
+                <li><a href="#about" name="about1" onclick="play11()">About</a></li>
+                <li><a href="#contact">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Intro -->
+        <article id="intro">
+            <h2 class="major">pending</h2>
+            <span class="image main"><img src="../static/images/pic01.jpg" alt=""/></span>
+            <p> nothing <a href="#work"> work</a>.</p>
+            <p> .</p>
+            <ul class="icons">
+                <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
+        <!-- Work -->
+        <article id="work">
+            <h2 class="major">function</h2>
+            <span class="image main"><img src="../static/images/pic02.jpg" height="10" alt=""/></span>
+            <p>.</p>
+            <p>.</p>
+            <ul class="icons">
+                <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
+        <!-- About -->
+        <article id="about">
+            <h2 class="major">About</h2>
+            <span class="image main"><img src="../static/images/pic03.jpg" height="10" alt=""/></span>
+            <p>主要什么功能呢，嗯，，，登录只是 简单的，已经完成，分析下吧，
+                最重要的还是那份笔记，笔记目前在WPS云端备份。
+                要不就,把搜集到的功能，样式，集装到这里，目前4个模块，第4个是表单登录，第3个是介绍，
+                第2个放插件 时间 按钮 滑动 加载 icon 分布
+                那第一个放什么？待定</p>
+            <ul class="icons">
+                <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact">
+            <h2 class="major">login</h2>
+            <form method="post" action="/upload" id="ddd">
+                <div class="fields">
+                    <div class="field half">
+                        <label for="name">Name：</label>
+                        <input type="text" name="name" id="name"/>
+                    </div>
+                    <div class="field half">
+                        <label for="email">PWD：</label>
+                        <input type="password" name="pwd" id="pwd"/>
+                    </div>
+                    <div class="field">
+                        <label for="message">BB：</label>
+                        <textarea name="bb" id="su1" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="button" value="OK" class="primary" id="su"/></li>
+                    <li><input type="reset" value="NO"/></li>
+                </ul>
+            </form>
+            <ul class="icons">
+                <!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+                <!--<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
+                <!--<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
+                <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </article>
+
+        <!-- Elements -->
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">&copy; 百度一下: <a href="https://www.baidu.com">搜索</a>.</p>
+    </footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+<!-- Scripts -->
+<script src="../static/assets/js/jquery.min.js"></script>
+<script src="../static/assets/js/browser.min.js"></script>
+<script src="../static/assets/js/breakpoints.min.js"></script>
+<script src="../static/assets/js/util.js"></script>
+<script src="../static/assets/js/main.js"></script>
+</body>
+</html>

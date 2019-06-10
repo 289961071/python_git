@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>ks查询</title>
+    <script src="../static/assets/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        .big {
+            line-height: 250%;
+        }
+
+    </style>
+</head>
+<body>
+
+<form id='ddd' action="log" class="big">
+    选择:<br>
+    <select id="xuanze" style="width: 150px;height: 30px;">
+        <option value="shouji">手机查询注册</option>
+        <option value="nicheng">昵称查询微信</option>
+        <option value="xiaofei">手机查询消费</option>
+    </select><br>
+    参数：<br>
+    <input type="text" id="canshu" value="" placeholder="手机号/昵称" style="width:150px;height:30px">
+    <br>
+    返回值:<br>
+    <textarea id="bb" name="bb" rows="5" cols="50" placeholder={{name1}}></textarea>
+    <br>
+    <input id='su' type="button" value="提交">
+    <input id='su1' type="button" value="刷新" style="margin-left: 50px">
+    <h6>session:{{session.name2}}</h6>
+</form>
+<table id="tb" border="2" style="border-collapse: collapse;width:590px;">
+
+</table>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#su1").click(function () {
+            window.location.reload();
+        });
+        $("#su").click(function () {
+            $("#bb").val('正在执行。。。');
+            $("#su").attr("disabled", "disabled");
+            $('#tb tr').remove();
+            var data1 = {
+                'xuanze': $('#xuanze').val(),
+                'canshu': $('#canshu').val()
+            };
+            // alert(data1['xuanze']);
+            $.ajax({
+                url: '/cha',
+                type: 'POST',
+                data: JSON.stringify(data1),
+                // dataType:'json',
+                // global:false,
+                contentType: "application/json; charset=UTF-8",
+
+                success: function (data) {
+                    $("#bb").val(data['d']);
+                    $("#su").removeAttr('disabled');
+                    var d1 = data['r'];
+                    var d2 = data['c'];
+                    var d3 = data['dd'];
+                    //遍历json数据到表格  新建tr  根据json判断有多少列
+                    for (var i = 0; i <= d3; i++) {
+                        $('#tb').append('<tr></tr>');
+                    }
+                    //遍历json数据到表格  列名
+                    // alert(d1[0]);
+                    $.each(d2, function (i, r1) {
+                        var s = "<th>" + r1 + "</th>";
+                        $('#tb tr').eq(0).append(s);
+                    });
+                    //遍历json数据到表格   数据
+                    // $('#tb').prepend('<tr></tr>');
+                    $.each(d1, function (i, r) {
+                        $.each(r, function (i1, r1) {
+                            var s = "<td  align='center'>" + r1 + "</td>";
+                            $('#tb tr').eq(i + 1).append(s);
+                        });
+                    });
+                },
+                error: function () {
+                    $("#bb").val('执行失败');
+                    $("#su").removeAttr('disabled');
+                    alert(" 数据错误!");
+                }
+            })
+        });
+
+    })
+</script>
+</body>
+</html>

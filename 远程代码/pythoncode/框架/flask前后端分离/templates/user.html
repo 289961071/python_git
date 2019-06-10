@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>user</h1>
+<form method="post" action="/user/add">
+    {{ form.hidden_tag() }}
+    <input name="name" type="text" id="name" placeholder="name">
+    <input name="password" type="password" id="password" placeholder="password">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
