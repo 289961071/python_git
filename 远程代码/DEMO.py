@@ -1,4 +1,3 @@
-#!/C:\Program Files\Python 3.5
 # coding=utf-8
 # ll 微信 monkeyrunner
 import time,sys
@@ -12,7 +11,6 @@ i,n=0,100
 for i in range(n):
     time.sleep(0.1)
     pro(i+1,n)
-
 
 # http://www.asciiworld.com/-Logos,50-.html
 # /***
