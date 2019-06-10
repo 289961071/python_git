@@ -79,7 +79,7 @@
 
 删除 
 	
-		exec 	ll_test_shuju '17788031539'
+		exec 	ll_test_shuju '13761701167'
 	
 		drop procedure ll_test_shuju
 	
@@ -186,7 +186,7 @@ select * from NewCustCoupon
 		 
 		 模板消息
 		 
-	 select openid from sysuserinfo where Mobile='17788031539'  --  oIH_StyRVo81WdCT8LC00mIRpi9c   heidi      oIH_St-6zzHfYJLWMDdovZMj0AF4
+	 select openid from sysuserinfo where Mobile='13761701167'  --  oIH_StyRVo81WdCT8LC00mIRpi9c   heidi      oIH_St-6zzHfYJLWMDdovZMj0AF4
 		 
 	 select * from WXTemplateMsg where id=1  
 	 
@@ -196,7 +196,7 @@ select * from NewCustCoupon
 
 			 		 
 		 
-		 select openid from sysuserinfo where Mobile='13802269981'  --  oIH_St6BU-zLFL-3dN7lbDb_iiBg
+		 select * from sysuserinfo where Mobile='17788031539'  --  oIH_St6BU-zLFL-3dN7lbDb_iiBg
 		 
 		 select * from WXTemplateMsgInfo where MsgId='hi3In3kE3Y_iBMfcCe7Tv_M99llDHWEfuiLDrty9mmY'  -- 19
 		 

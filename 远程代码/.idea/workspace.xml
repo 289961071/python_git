@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5e4d405-998c-4bc8-a0f7-26622d8ef8cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/项目/KS/Caps.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLcode/KS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLcode/KS.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/项目/KS/KS模板消息数据库.py" beforeDir="false" afterPath="$PROJECT_DIR$/项目/KS/KS模板消息数据库.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py" beforeDir="false" afterPath="$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3068">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="104">
+              <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -25,8 +27,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/项目/KS/KS模板消息数据库.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="130">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pythoncode/appium代码/log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#41#70#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,15 +75,16 @@
         <option value="$PROJECT_DIR$/项目/APPcode/hello.kv" />
         <option value="$PROJECT_DIR$/项目/APPcode/hello.py" />
         <option value="$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py" />
+        <option value="$PROJECT_DIR$/项目/KS/Caps.yaml" />
         <option value="$PROJECT_DIR$/项目/KS/KS模板消息数据库.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="71" />
-    <option name="y" value="84" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="41" />
+    <option name="y" value="98" />
     <option name="width" value="1936" />
-    <option name="height" value="898" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -91,6 +105,17 @@
             <path>
               <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
               <item name="远程代码" type="462c0819:PsiDirectoryNode" />
+              <item name="pythoncode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
+              <item name="远程代码" type="462c0819:PsiDirectoryNode" />
+              <item name="pythoncode" type="462c0819:PsiDirectoryNode" />
+              <item name="appium代码" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="远程代码" type="b2602c69:ProjectViewProjectNode" />
+              <item name="远程代码" type="462c0819:PsiDirectoryNode" />
               <item name="项目" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -107,11 +132,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/项目/KS" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\LL\远程仓库\远程代码\项目\KS" />
       <recent name="E:\LL\远程仓库\远程代码" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -133,7 +159,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.KS模板消息数据库">
+    <configuration name="KS模板消息数据库" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="远程代码" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/项目/KS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/项目/KS/KS模板消息数据库.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="kivy_demo1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="远程代码" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,6 +204,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.KS模板消息数据库" />
         <item itemvalue="Python.kivy_demo1" />
       </list>
     </recent_temporary>
@@ -175,11 +223,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="84" width="1936" height="898" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1670179" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1670179" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
@@ -187,8 +235,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19895288" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28741866" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39932507" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -267,17 +315,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/项目/KS/Caps.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pythoncode/appium代码/Method.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="e#253#313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pythoncode/appium代码/OtherMethod.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pythoncode/appium代码/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#41#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/项目/KS/KS模板消息正式库数据库.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3068">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="104">
+          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/项目/KS/KS模板消息数据库.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="130">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
