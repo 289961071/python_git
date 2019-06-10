@@ -20,8 +20,5 @@ for i in range(2):
     # canshu.pop(0)
     print(canshu)
 
-        # cuesor.execute("INSERT INTO WXTemplateMsgSend([WXTemplateMsgInfoId], [PlatformOpenId], [FansOpenId], [DataJson], [Url], [ProcessStatus], [ProcessPlanTime], [ProcessTime], [ProcessTimes], [ProcessResult], [CreateTime], [CreateId], [DataId], [MiniProgramAppid], [MiniProgramPagePath])"
-        #                " VALUES (%s,%s, %s,%s,%s,%s,%s,%s,%s, %s,%s, %s, %s, %s, %s);",tuple(canshu))
-        # con.commit()
 cuesor.close()
 con.close()
