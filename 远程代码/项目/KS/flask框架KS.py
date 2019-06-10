@@ -2,7 +2,7 @@
 # -*- coding:utf8 -*-
 # 李路
 from flask import Flask, render_template, request, session, jsonify,url_for,redirect,Response
-from xiangmu.KS import datebase,MYSQLdatebase
+from 项目.KS import datebase,MYSQLdatebase
 
 app = Flask(__name__)
 app.secret_key = '123456'
