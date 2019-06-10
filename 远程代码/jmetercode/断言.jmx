@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1281132211000</longProp>
+        <longProp name="ThreadGroup.end_time">1281132211000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <stringProp name="CookieManager.policy">rfc2109</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="VIEWSTATE" elementType="Argument">
+              <stringProp name="Argument.name">VIEWSTATE</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="jsessionid" elementType="Argument">
+              <stringProp name="Argument.name">jsessionid</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Language</stringProp>
+              <stringProp name="Header.value">zh-CN</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Step 1" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.so.com/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.so.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.so.com/s" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ie" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">utf-8</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">ie</stringProp>
+                </elementProp>
+                <elementProp name="fr" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">none</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">fr</stringProp>
+                </elementProp>
+                <elementProp name="src" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">360sou_newhome</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">src</stringProp>
+                </elementProp>
+                <elementProp name="q" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">dnf</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">q</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.so.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/s</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://e.so.com/search/rec" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="t" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">15380449982561</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">t</stringProp>
+                </elementProp>
+                <elementProp name="pl" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">3712</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pl</stringProp>
+                </elementProp>
+                <elementProp name="pvid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">12e0a5b161e1ef1b</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pvid</stringProp>
+                </elementProp>
+                <elementProp name="sid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">242ccc4e0d2b540fe75efb4c7abd99f0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">sid</stringProp>
+                </elementProp>
+                <elementProp name="p" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">mUivOYsoa5ccA/GAidV6zyG+qgtvTOcpjN10dk3bn6RASdrpMG8yFvPVSlFn8cI2IeeyrA01kfMhRJwSW4QGMcDcAAzQt9KODLkUaeM7SWTFd/JWXQAeAwgSiQlCT60lkwzvCH4DsCd3tc9c0RY/BMj/mYl5X/9I7ni2VLg3YQSmJJfZdkHw/dnguJOElJKdpnx0lfo/qwzEc2M9tloDjVyqqwC6kft9LN/6mK26RbLNUstt5/FZ4efAMk6/x7pAeI2BuBFiyNR3BGrKvfL1lJ4aUkEMR0tBuviyNf38G7qVZD0tXVrwCmYPhhDhs91Kba2NoiO/a28tia2tuoio0zaFwPw4tAAzNAiNXDKU4tDBKWMBkwjiSSxoU6JpDQBkZRE51A0y/oMtmTkfOPy3nS3P72xrdigxikm+EoVpjQD7uiVx4h2Yh8G/H+GtkOwC4yid6GBAeGYVt7x0oAUIe+gP7y0anRFFSr9uW4nK+CNnSKpo2YCv7pgzS3SK8rhy1RoHOvCkKkIMHdDySWQNCyeshYnmjJo3ufQT3p2hioUzv78IEB/CPwAhPpLcMQm4PpOmO1npo52i+URQHaGbBK/gBfKebExWC+y+i5gBMSzDhSEFpa4WyicgS5BKzVcPzR/0ulewwTz8udatzcevr1Q4K+a7kc1Y8ZUC/1xykfDusr1wNMxs6XOeWqZu++AjwgjGMEHKn8fCU6WLcHvUeEyY+/iFhxMf/9ubCyLla/NrIXfIuYa0fcBi34ckFNL3pSpkGNk/P6z2K7Hf3JQa1OOlgPGU42H/dkytsGKta/1w+XwISW0wRpV4/yWfKeYslVbIjj/CU5Ue3TDZ1Cz1t8+8Die/OgeuFeFpYpcZeX7U8uR1aditZmvoiIdQ1TiiDv/tCwKzkC8KYRrz09A3/cNNB6X/FtmYhOcULYxkHrR2mJH0ZYETHLNkIKe7SoaswidvzOA8I8EUdqMJ00ztYKWB/2FMqFzO33M1IUxkYGEk/z0/WzN4uqku2X+2AT5C/yRZbqpW2pyNWLvp06SyWr9CMX99bTpSWujptp5p6quekZU3UlGpu+otv+kJhZ5u1+SFhGqziWe6W6tr+blzkZ7lxncy1t6YOkIEqH9ydwYB9um04x2cOXYp8+33OyiTU0vpThZMa9s73wl+zgaEPNEd8cXeR2uYDKyUjjCIRVKH9NoKBX6aCNf4/8tV1k9MHhOU13xof2eyStWwlpcQj+ZiA4SdejKr+VgPrKoVdo0dEklw7KAGKNi1sXwVMYSd8HkOOl2MhepfQZfzbLznwWh2meDv2OmAhFnnoN+cfYE/GradoowGdCDOyevwTDB4kcPMoezmZdwIAHaXT2jpli8BEykjSaFrXe7dn9s8cyoF92HP3Qg5id1zaC6w4CyFeU8+ukTkhQ1YUmImFYUr82Mw2t18qg2K0BHgQReOUvKESgYIbfJFEcIIxjBByp/HxbQguY1/ho4HrJqDL9IsdfK17qP8vgzPyxghX5zCH5ugnBDAo03ah2o4Uy0hTXX2gTqJDBqm7rF4PjrbTRWT96f34Kl2yzwNPnihqCMm2csnrIWJ5oyaNwWKajc/Bx76bd6DJQF6I5EjgRVKldQXk9xLcGOkSL2lYYZv/znT+Bpz0X7JPuDXe80wXMAwNnwkH0iA2ootrmsBR1lFDtyVZTQMbG1YEUP205XESmO5wWdxGjhdoms0jp209xLhcihPX0tGB3hIUWr2dEZhwIGIglTc8Z3CtTH5VB/yRkosDZf99rLfHHk+bp59FJ9LiKaL/fay3xx5Pm5LM4AC4o5R7hZ83wyBN0x1c8ZiZowm/ZGcWYSSjb9EtbaHkgKmnHYn6ywAjUDLeiR+vWpDy5ptdNJYx/ntjtiVnGGmhSfA7EnlQ9WI7msHXTJHuq0Jig2+bmTU5qI5/2gA8YUJsoxDjNhLyyXEIDQ2d/ccnsfxB5eRl3Seo9Z4Wvkz4O3beITHfaUFvlyxcg5nnr2MEa+6e+PyccySl5JR90ZJkIzrPmh83Ab4CKmzXrmUieo0IqFupmEGYGA0POrSmlPuSMVcIP195OLDmPiTMtV4ozmthD9Xyf83Z0vkM3M8uoZF8OdICtl+lSohKD+6j8Dk272MOEVbuSlG+4K8Ak99we6/AQI6Z7ITWwcIfnj8MsqLXouG3FJNb/1nZ+791JEjTz4Y5S793eBmiSp95iGVtrFiuHcyYZiV3+lJoR1oD5pKlZwYlc6VcexYrKRuSnrciOv/cBl+vcHiblnC9uCtR44CPLyLKhO2fYzb4brai6INAO6/JZ6bQKI7LCjauwN/6Xr/947Zj7CUoRBGzWUwCOzzrpTrLACNQMt6JFmsDriHfjBmdK2ugQZWYJAdL/n6r6NitByzh2LT+5PJ9DAYzOqL2aOL6VyTt2UE38UtcIZSHzI9J8Df/3s1TOLJ7If06t06F0TuVLKhV5lO/f29qvN/R3yYUcPqkbuv9e5FxTyWTBucwUHK+R5WrxFIOx2nRviP1t6TPJP3OzoW2+QDCM+a9LSWu+T6zquwZEyY+/iFhxMf0INpi0XML4xDdIFpxK/aZ62Np41AhFZbdiAZzqb5nJN/q5fi0QDS0ym1PWL2ETldrx5w6dvVWv9QjFKOF7ievzT4BpbzruCP4vhonPBCzHgTVb1NW91q8X5a9gbdr16EvVQbTv2WSgsYUP4sfYuuhj0rcSBco0fEjfBbDMPxblJ2TK2wYq1r/djF5yzTKJnWezBlVNHDqfIaLSg2rt6FvJE9cO6HxKrdW1bugx00T9DR/baiSmEmP1tW7oMdNE/QiSI1LeTaAi1NZ8vymBZI7O6yvXA0zGzppwZScaXEcAQEOtHBE9T2krCah1yhAgcewi91T6iPj2jkSMZgYR4lEFFIQQ0rL18n2/MvNIWGiZ6knILEGawh0V8SeDxH2ZJBhWykaZY/w6Ao9X4lHjE+rGfPztD2KHTdBFIopJaTve64bkpvB35uV4ecs3a3igHQFtdO28N/BnQUDH41rf8PU8CpCj8a4UoqWwanKOsIM4P/XC8f0a0op/7ziiBgbyVtNyvs6HW3wfLE9DiCBc9TVywQN0PwCViKt0zxJxNxtUP7IkZu1wWMZs3M7gqfV/tl9GL9+glEoguwr4RWaiJuC1O/Sn8bg/1GcMx/F3qsDXEIrHzb07Jk4IrOCGjCDkupCbz5j8MRrc7cY93rFwwDHC/nq1wnx7KMwmvgWcJeVy2y5OwU5Ap0EaTrM4PStajSu+LdGIwKSDwANN90/oKBKs4c+sQZlqk+uuVRuFLwAnEhRJwSW4QGMcDcAAzQt9KOK5EsXZNCAxXSrVUUUzq1ypE5Km+1NFP45dFcAYGB36WHtItTTA9bd5zvD6xu0O4fTl5hugFJhwVoXdPoUZD/1R81TEGX4py+jwkiCxts5xxLnEpSlIT9snoiNxoP5FJjAftJilYpiPk4Gmg1SJ08ElwSGI9QuLgcCXesFds5w5mVJzl0oBhsSLNNDRi/QxI0gznM9l5gEpbwLVBjbLL+EHJvVZWDQzSUJv3MEVgmkh6dq4n+OQg3jqw8c8oY2EFNSZeYceG4OrXcGwQ0AMXiCXHvDAH4968CCVxpg9QSdpS091GyUbXbC3l24DWtzFQkXxA7IFsDQF7xmdaqnu8F1hhGQZqKzxiINnRXPD50mmtgKCSH7C9iCwINDe49N1Mv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">p</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">e.so.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/search/rec</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="99612">dnf</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
