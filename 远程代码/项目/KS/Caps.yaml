@@ -1,0 +1,13 @@
+platformName: Android
+platformVersion: 7.0
+deviceName: 192.168.12.50:5555
+deviceName1: 192.168.12.128:5559
+deviceName2: 8GP4C18712008862
+appPackage: com.tencent.mm
+appActivity: .ui.LauncherUI
+noReset: true
+unicodeKeyboard: True
+chromeOptions:
+    - androidProcess:
+        com.tencent.mm:tools
+recreateChromeDriverSessions: True
