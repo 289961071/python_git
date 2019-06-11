@@ -16,8 +16,8 @@ wc = WordCloud(background_color='white',  # 背景颜色
                # font_path="C:/Windows/Fonts/STFANGSO.ttf",  # 解决显示口字型乱码问题，可进入C:/Windows/Fonts/目录更换字体 也可以去
                # Wordcloud.py 28行 修改引用的字体包  前提是把字体包放入 这个模块
                random_state=42,  # 为每个词返回一个PIL颜色
-               # width=1000,  # 图片的宽
-               # height=860  #图片的长
+               # width=500,  # 图片的宽
+               # height=500,  #图片的长
                mode='RGBA'
                )
 # 添加自己的词库分词，比如添加'金三胖'到jieba词库后，当你处理的文本中含有金三胖这个词，
@@ -39,4 +39,4 @@ plt.figure()
 plt.imshow(wc.recolor(color_func=image_colors))
 plt.axis('off')
 # 保存图片
-wc.to_file('19th.png')
+wc.to_file('1th.png')
