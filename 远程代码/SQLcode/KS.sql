@@ -79,7 +79,7 @@
 
 删除 
 	
-		exec 	ll_test_shuju '13761701167'
+		exec 	ll_test_shuju '15921825165'
 	
 		drop procedure ll_test_shuju
 	
