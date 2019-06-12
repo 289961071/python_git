@@ -19,9 +19,9 @@
 
 		查 id
 
-		select * FROM Customer WHERE NickName like'%nove%'   --  oiNZm0nfm0oIRJIAItsOcx2dGKTY
+		select * FROM Customer WHERE NickName like'那路%'   --  oiNZm0pkAdIG-0nQIu-_5zJWMps8
 		
-		select * FROM Customer WHERE NickName like'%那路%'  --  oiNZm0pkAdIG-0nQIu-_5zJWMps8
+		select * FROM Customer WHERE NickName like'张綝 Sophia%'  --  oiNZm0vVGix4AM8OCnC7srAR2iYA
 
 		查昵称
 
@@ -40,17 +40,17 @@
 
 		刷能量
 
-		select * from Run_EnergyRecord where userid='oiNZm0r6gvU4-i4_n3jtWuHp8Of0'
+		select * from Run_EnergyRecord where userid='oiNZm0vVGix4AM8OCnC7srAR2iYA'
 		
-		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('oiNZm0r6gvU4-i4_n3jtWuHp8Of0','5','10000000','10016839')
+		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('oiNZm0vVGix4AM8OCnC7srAR2iYA','5','1000000','1001200')
 
 		刷一人团
 		
-		select * from [dbo].[Run_Team] where id=117 or id=118    --    oiNZm0p_e31SvrTUi7bgOlANg1uM
+		select * from [dbo].[Run_Team] where id=138   --    oiNZm0p_e31SvrTUi7bgOlANg1uM
 		
 		update [Run_Team] set StartDate='2019-05-28',EndDate='2019-05-31' ,status=1 where id=121
 		
-		update [Run_Team] set StartDate='2019-05-07',EndDate='2019-05-10'  where id=131
+		update [Run_Team] set StartDate='2019-05-07',EndDate='2019-05-10'  where id=138
 
 
 		select * from Run_TeamUser where TeamId=46
@@ -74,16 +74,18 @@
 		select t.*,u.Status as TeamUserStatus,ROW_NUMBER()over(partition by t.Type order by case when t.status = 0 then '20990101' else t.StartDate end desc ) RN
 		from Run_TeamUser u 
 		left join Run_Team t on u.TeamId = t.Id 
-		where u.UserId='oiNZm0pkAdIG-0nQIu-_5zJWMps8' and t.status<>4  -- and u.Status=0
+		where u.UserId='oiNZm0udHtEdvRn9s7-1nM_tDAgg' and t.status<>4  -- and u.Status=0
 		)t
 		where t.rn = 1
 		
 		刷步数
 		
-		select *from Run_Step where userid='oiNZm0nfm0oIRJIAItsOcx2dGKTY' and rundate='2019-05-13'
+		select *from Run_Step where userid='oiNZm0u6DRggBfA5iGLOQq7wetCo' and rundate='2019-06-12'
 		
-		update Run_Step set step=315000  where  userid='oiNZm0nfm0oIRJIAItsOcx2dGKTY' and rundate='2019-05-10'
+		update Run_Step set step=315000  where  userid='oiNZm0udHtEdvRn9s7-1nM_tDAgg' and rundate='2019-06-12'
 		
+		INSERT INTO Run_Step VALUES ('oiNZm0udHtEdvRn9s7-1nM_tDAgg', '2019-06-11', 315000, '2019-06-11 13:55:17.923', '2019-06-11 13:55:17.923', '0', NULL, 0);
+
 		删领取实物
 		
 		select * from Run_MyPrize where UserId='oiNZm0pkAdIG-0nQIu-_5zJWMps8' and GoodsId=1
@@ -108,9 +110,9 @@
 
 	删除用户  Abbott_App
 
-	select * from  CustomerConfig  where unionid='oiNZm0iYIzON2yOjrQahMKpxM71g'
+	select * from  CustomerConfig  where unionid='oiNZm0vVGix4AM8OCnC7srAR2iYA'
 	
-	DELETE from CustomerConfig where unionid='oiNZm0iYIzON2yOjrQahMKpxM71g'
+	DELETE from CustomerConfig where unionid='oiNZm0vVGix4AM8OCnC7srAR2iYA'
 
 妇女节    AbbottDiabetesWeChat
 

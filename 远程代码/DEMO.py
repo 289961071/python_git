@@ -39,9 +39,9 @@ wc = WordCloud(background_color='white',  # 背景颜色
                )
 #jieba.add_word('大师兄')
 
-text = open(r'D:\b站弹幕.csv','r',encoding='utf-8').read()
+text = open(r'D:\b站弹幕2.csv','r',encoding='gbk').read()
 wc.generate(text)
 plt.imshow(wc)
 plt.axis('off')
 plt.show()
-wc.to_file('3th.png')
+wc.to_file('1th.png')

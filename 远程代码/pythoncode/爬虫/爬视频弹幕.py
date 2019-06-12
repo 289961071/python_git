@@ -3,8 +3,8 @@
 import requests,datetime,pandas
 from lxml import etree
 from bs4 import BeautifulSoup
-#B站的弹幕文件在 源码的 cID 里 75163572
-url='https://comment.bilibili.com/75163572.xml'
+#B站的弹幕文件在 源码的 cID 里 75163572  aid &cid
+url='https://comment.bilibili.com/89750346.xml'
 r=requests.get(url)
 r.encoding='utf-8'
 
@@ -27,4 +27,4 @@ for i in d:
 print('获取了 %s 条' %n)
 
 df=pandas.DataFrame(dl)
-df.to_csv(r'd:\b站弹幕.csv')
+df.to_csv(r'd:\b站弹幕2.csv', encoding = 'utf-8')
