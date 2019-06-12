@@ -26,5 +26,22 @@
 #  *________##_______####________####______________
 #  */
 
-n=10
-print('获取了 %s 条' %n)
+import jieba
+from matplotlib import pyplot as plt
+from wordcloud import ImageColorGenerator,STOPWORDS,WordCloud
+from scipy.misc import imread # 这是一个处理图像的函数
+
+#back_color=imread('a.jpg') # 解析该图片
+
+wc = WordCloud(background_color='white',  # 背景颜色
+                width=500,  # 图片的宽
+                height=500  #图片的长
+               )
+#jieba.add_word('大师兄')
+
+text = open(r'D:\b站弹幕.csv','r',encoding='utf-8').read()
+wc.generate(text)
+plt.imshow(wc)
+plt.axis('off')
+plt.show()
+wc.to_file('3th.png')
