@@ -4,7 +4,7 @@
 	
 		select id,openid,Nickname,unionid,CreateTime from WXFans where MemberId=510253841 openid='oIH_St97V2Ne39oQsKuvovo074c4'
 		
-		select *  from WXFans where Nickname like 'vivo x21%' or Nickname like '%heidi%'  ---  oUaMnwyTwG43wiO-uHDMIvtE784A
+		select *  from WXFans where  Nickname like '%heidi%'  ---  oUaMnwyTwG43wiO-uHDMIvtE784A
 		
 		DELETE FROM WXFans where Nickname like 'vivo x21%'
 		
@@ -14,7 +14,7 @@
 
 		select  id,openid,unionid,mobile  from sysuserinfo where openid='oUaMnw7iFkvYRfrs-0INFKOV199o'  Mobile='15921825165' or Mobile='17788031539'  --  oIH_St-6zzHfYJLWMDdovZMj0AF4
 
-		select * from sysuserinfo where Mobile='15921825165'  -- 510253851
+		select * from sysuserinfo where Mobile='15921825165'  -- 10230754   oIH_St-6zzHfYJLWMDdovZMj0AF4
 		
 		UPDATE sysuserinfo set openid =''   where Mobile='18501709609'
 		
@@ -27,7 +27,7 @@
 
 				卡券
 
-		select * from BusCoupon where openid='oUaMnwyTwG43wiO-uHDMIvtE784A' and BusCouponCategoryId=1
+		select * from BusCoupon where openid='oIH_St-6zzHfYJLWMDdovZMj0AF4' and BusCouponCategoryId=1
 
 		select * From NewCustCoupon WHERE unionid='o5Icn5xRzrtmzDdt685gC2EpGWMs'
 
@@ -208,7 +208,7 @@ select * from NewCustCoupon
 		 
 		 短信链接
 		 
-		 select * from SmsRecord order by id desc
+		 select top 20 * from SmsRecord order by id desc
 		 
 		 select * from BusCoupon where openid='oUaMnw9Cg3cSrnNKTNvJWVSWw2As' and BusCouponCategoryId in (1,32,33)
 		 
