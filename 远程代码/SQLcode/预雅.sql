@@ -153,5 +153,21 @@
 		update ReserveRecord set ReserveStartTime='2019-06-04 15:30:00.000',ReserveEndTime='2019-06-04 16:00:00.000' where reservecode='e3c84c64f95f337f'
 		
 		
+		新客老客
+		
+		select * from CSRNewCustomer where mobile='98945995508' ORDER BY id desc   -- 新客
 		
 		
+		select * from [dbo].[CRMTaggedUser]  --老客
+		
+		INSERT INTO []([Id], [Mobile], [Source], [Channel], [HCPCode], [OrderHCPCode], [IsBuy], [IsBuyReader], [IsTYHBuy], [CreateTime], [OrderNo], [OrderTime], [LastUpdateTime], [ControlGroup], [ValidateWay], [ConvertTime], [UniqueNumber], [IsTYHNewCustomer]) VALUES (5016, '98957526699', N'3', N'微商城', 'HCP-Shanghai-Rep-1', 'HCP-Shanghai-Rep-1', NULL, NULL, NULL, '2018-11-13 18:06:40.450', N'20181534055304380D6jxiS', '2018-07-13 17:53:41.000', '2018-11-13 18:06:40.450', 0, 'CSR', NULL, N'20181534055304380D6jxiS_WS00S01C00_3', '1');
+
+		INSERT INTO [CRMTaggedUser]( [BatchNo], [TagName], [CustomerId], [CustomerMobile], [CustomerName], [OrderSource], [OrderDate], [ProcessStatus], [ProcessResult], [CreateTime], [UpdateTime]) VALUES ( N'20190228', N'lapsed', N'dc6ce663-c1dd-e811', N'98945995508', N'时圣人', N'京东', '2018-11-03', 2, N'OK', '2019-02-28 16:28:59.323', '2019-02-28 16:28:59.970');
+
+	密码修改  --   tPnkk6WSeOYM+
+	
+	select Password,*
+	--update su set su.Password = upper(SUBSTRING(master.dbo.fn_varbintohexstr(HashBytes('MD5','tPnkk6WSeOYM+')), 3, 32) ),su.LoginFailures = 0
+from SysUserInfo su with(nolock)
+where su.LoginFailures > = 10 and name='admin'
+

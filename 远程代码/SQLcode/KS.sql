@@ -14,7 +14,7 @@
 
 		select  id,openid,unionid,mobile  from sysuserinfo where openid='oUaMnw7iFkvYRfrs-0INFKOV199o'  Mobile='15921825165' or Mobile='17788031539'  --  oIH_St-6zzHfYJLWMDdovZMj0AF4
 
-		select * from sysuserinfo where Mobile='97878201'  -- 510253851
+		select * from sysuserinfo where Mobile='15921825165'  -- 510253851
 		
 		UPDATE sysuserinfo set openid =''   where Mobile='18501709609'
 		
