@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # coding=utf-8
 import pymssql
-server1 = "localhost"
 server = "192.168.1.40"
 user = "lilu"
 pwd = "Lilu329297!@#"
