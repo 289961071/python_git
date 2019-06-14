@@ -19,7 +19,7 @@
 
 		查 id
 
-		select * FROM Customer WHERE NickName like'那路%'   --  oiNZm0pkAdIG-0nQIu-_5zJWMps8
+		select * FROM Customer WHERE NickName like'赛门%'   --  oFNDi5A4W-YF7rLivSeRVDVLjeL0
 		
 		select * FROM Customer WHERE NickName like'张綝 Sophia%'  --  oiNZm0vVGix4AM8OCnC7srAR2iYA
 
@@ -106,13 +106,15 @@
 	
 	formid 
 	
-	select * from  WeChatFormId where openid='oFNDi5IeLZUJ56bOU71Bjd-K5guA' ORDER BY ExpiresIn desc
+	select * from  WeChatFormId where openid='oFNDi5A4W-YF7rLivSeRVDVLjeL0' ORDER BY ExpiresIn desc
 
 	删除用户  Abbott_App
 
-	select * from  CustomerConfig  where unionid='oiNZm0vVGix4AM8OCnC7srAR2iYA'
+	select * from  CustomerConfig  where unionid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'  --oiNZm0ik1E56gx7HBEwMVF2MTWp0
 	
-	DELETE from CustomerConfig where unionid='oiNZm0vVGix4AM8OCnC7srAR2iYA'
+	select * from  CustomerConfig  where unionid='oiNZm0ik1E56gx7HBEwMVF2MTWp0' 
+	
+	DELETE from CustomerConfig where unionid='oiNZm0ik1E56gx7HBEwMVF2MTWp0'
 
 妇女节    AbbottDiabetesWeChat
 
@@ -162,7 +164,7 @@
 		
 		INSERT INTO []([Id], [Mobile], [Source], [Channel], [HCPCode], [OrderHCPCode], [IsBuy], [IsBuyReader], [IsTYHBuy], [CreateTime], [OrderNo], [OrderTime], [LastUpdateTime], [ControlGroup], [ValidateWay], [ConvertTime], [UniqueNumber], [IsTYHNewCustomer]) VALUES (5016, '98957526699', N'3', N'微商城', 'HCP-Shanghai-Rep-1', 'HCP-Shanghai-Rep-1', NULL, NULL, NULL, '2018-11-13 18:06:40.450', N'20181534055304380D6jxiS', '2018-07-13 17:53:41.000', '2018-11-13 18:06:40.450', 0, 'CSR', NULL, N'20181534055304380D6jxiS_WS00S01C00_3', '1');
 
-		INSERT INTO [CRMTaggedUser]( [BatchNo], [TagName], [CustomerId], [CustomerMobile], [CustomerName], [OrderSource], [OrderDate], [ProcessStatus], [ProcessResult], [CreateTime], [UpdateTime]) VALUES ( N'20190228', N'lapsed', N'dc6ce663-c1dd-e811', N'98945995508', N'时圣人', N'京东', '2018-11-03', 2, N'OK', '2019-02-28 16:28:59.323', '2019-02-28 16:28:59.970');
+		INSERT INTO [CRMTaggedUser]( [BatchNo], [TagName], [CustomerId], [CustomerMobile], [CustomerName], [OrderSource], [OrderDate], [ProcessStatus], [ProcessResult], [CreateTime], [UpdateTime]) VALUES ( N'20190228', N'lapsed', N'dc6ce663-c1dd-e81133', N'98343067980', N'杨光', N'天猫', '2018-11-03', 2, N'OK', '2019-02-28 16:28:59.323', '2019-02-28 16:28:59.970');
 
 	密码修改  --   tPnkk6WSeOYM+
 	

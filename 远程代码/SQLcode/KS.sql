@@ -208,8 +208,15 @@ select * from NewCustCoupon
 		 
 		 短信链接
 		 
-		 select top 20 * from SmsRecord order by id desc
+		 select top 200 * from SmsRecord order by id desc
 		 
 		 select * from BusCoupon where openid='oUaMnw9Cg3cSrnNKTNvJWVSWw2As' and BusCouponCategoryId in (1,32,33)
+		 
+				发送短信
+				
+				短信内容
+			
+			
+			
 		 
 		 
