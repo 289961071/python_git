@@ -21,7 +21,7 @@
 
 		select * FROM Customer WHERE NickName like'赛门%'   --  oFNDi5A4W-YF7rLivSeRVDVLjeL0
 		
-		select * FROM Customer WHERE NickName like'张綝 Sophia%'  --  oiNZm0vVGix4AM8OCnC7srAR2iYA
+		select * FROM Customer WHERE NickName like'那路逗%'  --  oiNZm0vVGix4AM8OCnC7srAR2iYA
 
 		查昵称
 
@@ -110,11 +110,11 @@
 
 	删除用户  Abbott_App
 
-	select * from  CustomerConfig  where unionid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'  --oiNZm0ik1E56gx7HBEwMVF2MTWp0
+	select * from  CustomerConfig  where unionid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'  --  oiNZm0ik1E56gx7HBEwMVF2MTWp0    那路逗
 	
 	select * from  CustomerConfig  where unionid='oiNZm0ik1E56gx7HBEwMVF2MTWp0' 
 	
-	DELETE from CustomerConfig where unionid='oiNZm0ik1E56gx7HBEwMVF2MTWp0'
+	DELETE from CustomerConfig where unionid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
 
 妇女节    AbbottDiabetesWeChat
 
@@ -172,4 +172,6 @@
 	--update su set su.Password = upper(SUBSTRING(master.dbo.fn_varbintohexstr(HashBytes('MD5','tPnkk6WSeOYM+')), 3, 32) ),su.LoginFailures = 0
 from SysUserInfo su with(nolock)
 where su.LoginFailures > = 10 and name='admin'
+
+购买记录 -- 15162986259  13922100177
 

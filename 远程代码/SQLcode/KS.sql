@@ -198,9 +198,9 @@ select * from NewCustCoupon
 		 
 		 select * from sysuserinfo where Mobile='17788031539'  --  oIH_St6BU-zLFL-3dN7lbDb_iiBg
 		 
-		 select * from WXTemplateMsgInfo where MsgId='hi3In3kE3Y_iBMfcCe7Tv_M99llDHWEfuiLDrty9mmY'  -- 19
+		 select * from WXTemplateMsgInfo where MsgId='0iqqydBRd5LdnxiaiLX7O233f7nFHyXgaScT77RVIcI'  -- 19
 		 
-		 select * from WXTemplateMsg where template_id='hi3In3kE3Y_iBMfcCe7Tv_M99llDHWEfuiLDrty9mmY'  
+		 select * from WXTemplateMsg where template_id='0iqqydBRd5LdnxiaiLX7O233f7nFHyXgaScT77RVIcI'  
 		 
 		 select  COUNT(*) from WXTemplateMsgSend  where WXTemplateMsgInfoid=9 and ProcessPlanTime  between '2019-06-01 00:00:00' and '2019-06-02 00:00:00' ORDER BY id desc  
 		 
