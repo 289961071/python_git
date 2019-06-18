@@ -14,7 +14,7 @@
 
 		select  id,openid,unionid,mobile  from sysuserinfo where openid='oUaMnw7iFkvYRfrs-0INFKOV199o'  Mobile='15921825165' or Mobile='17788031539'  --  oIH_St-6zzHfYJLWMDdovZMj0AF4
 
-		select * from sysuserinfo where Mobile='15921825165'  -- 10230754   oIH_St-6zzHfYJLWMDdovZMj0AF4
+		select * from sysuserinfo where Mobile='18560083101'  -- 10230754   oIH_St-6zzHfYJLWMDdovZMj0AF4
 		
 		UPDATE sysuserinfo set openid =''   where Mobile='18501709609'
 		
@@ -23,7 +23,7 @@
 
 				会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=510253850
+		select * from UserAttribute where userid=10439839
 
 				卡券
 

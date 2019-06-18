@@ -26,22 +26,17 @@
 #  *________##_______####________####______________
 #  */
 
-import jieba
-from matplotlib import pyplot as plt
-from wordcloud import ImageColorGenerator,STOPWORDS,WordCloud
-from scipy.misc import imread # 这是一个处理图像的函数
+s='-'
+a=('a','b','c')
+print(s.join(a))
 
-#back_color=imread('a.jpg') # 解析该图片
+L = [ 'xiaohong', '12', 'adf12', '14',u'晓明']
 
-wc = WordCloud(background_color='white',  # 背景颜色
-                width=500,  # 图片的宽
-                height=500  #图片的长
-               )
-#jieba.add_word('大师兄')
-
-text = open(r'D:\b站弹幕.csv','r',encoding='utf-8').read()
-wc.generate(text)
-plt.imshow(wc)
-plt.axis('off')
-plt.show()
-wc.to_file('2th.png')
+for x in L:
+    try:
+        int(x)
+    except:
+        print(x)
+from cryptography.fernet import Fernet
+c = Fernet.generate_key()
+print(c)
