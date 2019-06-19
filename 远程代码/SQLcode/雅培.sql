@@ -19,7 +19,7 @@
 
 		查 id
 
-		select * FROM Customer WHERE NickName like'赛门%'   --  oFNDi5A4W-YF7rLivSeRVDVLjeL0
+		select * FROM Customer WHERE NickName like'一加A%'   --  oFNDi5A4W-YF7rLivSeRVDVLjeL0   ogb9a1I6Uj7_K4HjFg53cry3U2cE
 		
 		select * FROM Customer WHERE NickName like'那路逗%'  --  oiNZm0vVGix4AM8OCnC7srAR2iYA
 
@@ -40,9 +40,9 @@
 
 		刷能量
 
-		select * from Run_EnergyRecord where userid='oiNZm0vVGix4AM8OCnC7srAR2iYA'
+		select * from Run_EnergyRecord where userid='ogb9a1L9ykyTiBIL9W-y6gA_KJA0'
 		
-		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('oiNZm0vVGix4AM8OCnC7srAR2iYA','5','1000000','1001200')
+		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('ogb9a1L9ykyTiBIL9W-y6gA_KJA0','5','10000000','10000000')
 
 		刷一人团
 		
@@ -104,9 +104,11 @@
 		
 相册 Abbott_App
 	
-	formid 
+	formid  
 	
-	select * from  WeChatFormId where openid='oFNDi5A4W-YF7rLivSeRVDVLjeL0' ORDER BY ExpiresIn desc
+	select * from  WeChatFormId where openid='o-3vr4goZ8SSkXmtHzo0avWqgWho' ORDER BY ExpiresIn desc
+	
+	
 
 	删除用户  Abbott_App
 

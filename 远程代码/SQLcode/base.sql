@@ -97,3 +97,54 @@ DROP DATABASE lilu2
 
 Select CONVERT(varchar(100), GETDATE(), 120)
 	
+	函数   SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。NOW() 返回当前时间
+
+
+	SELECT name, SUM(pwd),NOW() FROM user1 GROUP BY name HAVING SUM(pwd)
+	
+	select count(name) from user1
+	
+	去重后的个数
+	
+	select count(distinct name) from user1
+	
+	UCASE 函数把字段的值转换为大写。LCASE 函数把字段的值转换为小写。
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

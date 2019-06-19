@@ -12,9 +12,9 @@
 
 				会员主表
 
-		select  id,openid,unionid,mobile  from sysuserinfo where openid='oUaMnw7iFkvYRfrs-0INFKOV199o'  Mobile='15921825165' or Mobile='17788031539'  --  oIH_St-6zzHfYJLWMDdovZMj0AF4
+		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='18501707127'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
 
-		select * from sysuserinfo where Mobile='18560083101'  -- 10230754   oIH_St-6zzHfYJLWMDdovZMj0AF4
+		select * from sysuserinfo where Mobile='18501707127'  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
 		
 		UPDATE sysuserinfo set openid =''   where Mobile='18501709609'
 		
@@ -71,11 +71,14 @@
 		
 		UPDATE  sysuserinfo set  UserCode='KS201918012' where Mobile='18516120659'
 		
-			修改day1 day7 day14  没有就造数据
+			修改day1 day7 day14  没有就造数据  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
 			
 		select * From NewCustCoupon
 
-		INSERT INTO [dbo].[NewCustCoupon]( [mobile], [openid], [unionid], [CouponPack], [CreateTime], [CouponState], [SendTime], [GetTime], [FirstBuyTime], [FansUpdateTime], [FirstConnState], [FirstConnTime], [SecondConnState], [SecondConnTime], [ThirdConnState], [ThirdConnTime], [MemberTime], [vip_type]) VALUES ('15921825165', 'oUaMnw9Cg3cSrnNKTNvJWVSWw2As', 'o5Icn53_345jonxOquInCfjg1ROc', 1, '2019-04-01 18:25:01.623', 0, NULL, NULL, '2019-03-26 22:07:04.793', '2019-04-01 18:25:01.623', 2, '2019-04-01 18:33:06.063', 2, '2019-04-01 18:51:53.907', 2, '2019-04-01 18:37:40.733', '2019-04-01 18:25:01.623', NULL);
+		INSERT INTO [dbo].[NewCustCoupon]( [mobile], [openid], [unionid], [CouponPack], [CreateTime], [CouponState], [SendTime], [GetTime], [FirstBuyTime], [FansUpdateTime], [FirstConnState], [FirstConnTime], [SecondConnState], [SecondConnTime], [ThirdConnState], [ThirdConnTime], [MemberTime], [vip_type]) VALUES ('18501707127', 'oUaMnw_opPWHeP97xDJlZihj54Ek', 'o5Icn51jGsdCpqLlkP_7bsmzx0_M', 1, '2019-04-01 18:25:01.623', 0, NULL, NULL, '2019-03-26 22:07:04.793', '2019-04-01 18:25:01.623', 2, '2019-04-01 18:33:06.063', 2, '2019-04-01 18:51:53.907', 2, '2019-04-01 18:37:40.733', '2019-04-01 18:25:01.623', NULL);
+		
+		update NewCustCoupon set FirstBuyTime='2019-06-18 00:00:00',
+    FirstConnState=0,SecondConnState=0,ThirdConnState=0 where id=4
 
 删除 
 	
