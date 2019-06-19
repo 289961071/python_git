@@ -19,7 +19,7 @@
 
 		查 id
 
-		select * FROM Customer WHERE NickName like'一加A%'   --  oFNDi5A4W-YF7rLivSeRVDVLjeL0   ogb9a1I6Uj7_K4HjFg53cry3U2cE
+		select * FROM Customer WHERE NickName like'Polaris%'   --  oFNDi5A4W-YF7rLivSeRVDVLjeL0   ogb9a1I6Uj7_K4HjFg53cry3U2cE
 		
 		select * FROM Customer WHERE NickName like'那路逗%'  --  oiNZm0vVGix4AM8OCnC7srAR2iYA
 
@@ -74,9 +74,11 @@
 		select t.*,u.Status as TeamUserStatus,ROW_NUMBER()over(partition by t.Type order by case when t.status = 0 then '20990101' else t.StartDate end desc ) RN
 		from Run_TeamUser u 
 		left join Run_Team t on u.TeamId = t.Id 
-		where u.UserId='oiNZm0udHtEdvRn9s7-1nM_tDAgg' and t.status<>4  -- and u.Status=0
+		where u.UserId='ogb9a1N1ecXelruHJiy4Ls9Kr-FA' and t.status<>4  -- and u.Status=0
 		)t
 		where t.rn = 1
+		
+		
 		
 		刷步数
 		
