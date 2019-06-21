@@ -108,7 +108,7 @@
 	
 	formid  
 	
-	select * from  WeChatFormId where openid='o-3vr4goZ8SSkXmtHzo0avWqgWho' ORDER BY ExpiresIn desc
+	select * delete from  WeChatFormId where openid='o-3vr4uLUsCQ_rK-f9Mw3WZ-NGqM' ORDER BY ExpiresIn desc
 	
 	
 
@@ -178,4 +178,9 @@ from SysUserInfo su with(nolock)
 where su.LoginFailures > = 10 and name='admin'
 
 购买记录 -- 15162986259  13922100177
+
+log日志
+
+select top 10 * from logapi
+
 

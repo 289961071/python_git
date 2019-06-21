@@ -4,7 +4,7 @@
 	
 		select id,openid,Nickname,unionid,CreateTime from WXFans where MemberId=510253841 openid='oIH_St97V2Ne39oQsKuvovo074c4'
 		
-		select *  from WXFans where  Nickname like '%heidi%'  ---  oUaMnwyTwG43wiO-uHDMIvtE784A
+		select *  from WXFans where  Nickname like '%张綝 Sophia%'  ---  oUaMnwyTwG43wiO-uHDMIvtE784A
 		
 		DELETE FROM WXFans where Nickname like 'vivo x21%'
 		
@@ -12,7 +12,7 @@
 
 				会员主表
 
-		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='18501707127'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
+		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='13917346687'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
 
 		select * from sysuserinfo where Mobile='18501707127'  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
 		
@@ -82,11 +82,11 @@
 
 删除 
 	
-		exec 	ll_test_shuju '18516120659'
+		exec 	ll_test_shuju '18501703352'
 	
 		drop procedure ll_test_shuju
 	
-		create   procedure ll_test_shuju (@mobile VARCHAR(20))
+		create alter  procedure ll_test_shuju (@mobile VARCHAR(20))
 		as
 		begin
 			declare @id int
