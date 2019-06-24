@@ -40,9 +40,9 @@
 
 		刷能量
 
-		select * from Run_EnergyRecord where userid='ogb9a1L9ykyTiBIL9W-y6gA_KJA0'
+		select * from Run_EnergyRecord where userid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
 		
-		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('ogb9a1L9ykyTiBIL9W-y6gA_KJA0','5','10000000','10000000')
+		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('oiNZm0pkAdIG-0nQIu-_5zJWMps8','5','10000000','10012554')
 
 		刷一人团
 		
@@ -108,7 +108,7 @@
 	
 	formid  
 	
-	select * delete from  WeChatFormId where openid='o-3vr4uLUsCQ_rK-f9Mw3WZ-NGqM' ORDER BY ExpiresIn desc
+	select *  from  WeChatFormId where openid='o-3vr4uLUsCQ_rK-f9Mw3WZ-NGqM' ORDER BY ExpiresIn desc
 	
 	
 
@@ -119,6 +119,53 @@
 	select * from  CustomerConfig  where unionid='oiNZm0ik1E56gx7HBEwMVF2MTWp0' 
 	
 	DELETE from CustomerConfig where unionid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
+	
+	触发模板消息
+	
+	INSERT INTO [AbbottDiabetesWeChat].[dbo].[WXTemplateMsgSend]
+    ([MsgInfoId]
+    ,[SysUserInfoId]
+    ,[PlatformOpenId]
+    ,[FansOpenId]
+    ,[DataJson]
+    ,[Url]
+    ,[ProcessStatus]
+    ,[ProcessPlanTime]
+    ,[IsTimely]
+    ,[MiniProgramAppid]
+    ,[MiniProgramPagePath]
+    ,[TemplateId]
+    )
+
+           SELECT w.Id [MsgInfoId]
+                 ,0 [SysUserInfoId]
+                 ,w.[PlatformOpenId]
+                 ,t.OpenId [FansOpenId]
+                 ,replace(replace(Content,
+                 '{Nickname}',t.NickName),
+                 '{JoinDate}', CONVERT(nvarchar(10),GETDATE(),120)) DataJson
+                 ,[Url]
+                 ,1 [ProcessStatus]
+                 ,GETDATE() [ProcessPlanTime]
+                 ,1 [IsTimely]
+                 ,[MiniProgramAppid]
+                 ,[MiniProgramPagePath]
+                 ,'' [TemplateId]
+             FROM [AbbottDiabetesWeChat].dbo.WXMessageInfo w WITH (NOLOCK)
+                 ,(
+                  SELECT distinct c.NickName
+                        ,w.OpenId
+                    FROM [dbo].[Customer] c WITH (NOLOCK)
+                         INNER JOIN dbo.Run_User r WITH (nolock) ON c.Id = r.UserId
+                         INNER JOIN AbbottDiabetesWeChat.dbo.WXFans w with(NOLOCK) on r.UserId = w.UnionId
+                         LEFT JOIN dbo.Run_Step s WITH (nolock) ON r.UserId = s.UserId
+                                                                   --AND s.RunDate = CAST(GETDATE() AS date)
+                    WHERE c.NickName in('Polaris','赛门LHJ')
+                  ) t
+             WHERE w.MsgType = 'templet'
+                   AND w.Description = 'templet_warn'
+									 
+									 
 
 妇女节    AbbottDiabetesWeChat
 
@@ -161,10 +208,11 @@
 		
 		新客老客
 		
-		select * from CSRNewCustomer where mobile='98945995508' ORDER BY id desc   -- 新客
+		select * from CSRNewCustomer where mobile='13509690202' ORDER BY id desc   -- 新客
 		
+		select *from SysUserInfo where Mobile='13509690202'
 		
-		select * from [dbo].[CRMTaggedUser]  --老客
+		select top 10 * from [dbo].[CRMTaggedUser] where CustomerMobile='13509690202' ORDER BY id desc --老客
 		
 		INSERT INTO []([Id], [Mobile], [Source], [Channel], [HCPCode], [OrderHCPCode], [IsBuy], [IsBuyReader], [IsTYHBuy], [CreateTime], [OrderNo], [OrderTime], [LastUpdateTime], [ControlGroup], [ValidateWay], [ConvertTime], [UniqueNumber], [IsTYHNewCustomer]) VALUES (5016, '98957526699', N'3', N'微商城', 'HCP-Shanghai-Rep-1', 'HCP-Shanghai-Rep-1', NULL, NULL, NULL, '2018-11-13 18:06:40.450', N'20181534055304380D6jxiS', '2018-07-13 17:53:41.000', '2018-11-13 18:06:40.450', 0, 'CSR', NULL, N'20181534055304380D6jxiS_WS00S01C00_3', '1');
 

@@ -12,18 +12,22 @@
 
 				会员主表
 
-		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='13917346687'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
+		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='15921825165'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
 
 		select * from sysuserinfo where Mobile='18501707127'  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
 		
-		UPDATE sysuserinfo set openid =''   where Mobile='18501709609'
+		UPDATE sysuserinfo set openid =''   where Mobile='15921825165'
 		
 		UPDATE WXFans set MemberId='' where MemberId=510253841
 		
 
 				会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=10439839
+		select * from UserAttribute where userid=510253920
+		
+			修改领取动作
+			
+			UPDATE UserAttribute set iscoupon=0 where userid=510253920
 
 				卡券
 
@@ -82,11 +86,11 @@
 
 删除 
 	
-		exec 	ll_test_shuju '18501703352'
+		exec 	ll_test_shuju '15921825165'
 	
 		drop procedure ll_test_shuju
 	
-		create alter  procedure ll_test_shuju (@mobile VARCHAR(20))
+		create   procedure ll_test_shuju (@mobile VARCHAR(20))
 		as
 		begin
 			declare @id int
@@ -211,7 +215,7 @@ select * from NewCustCoupon
 		 
 		 短信链接
 		 
-		 select top 200 * from SmsRecord order by id desc
+		 select top 20 * from SmsRecord order by id desc
 		 
 		 select * from BusCoupon where openid='oUaMnw9Cg3cSrnNKTNvJWVSWw2As' and BusCouponCategoryId in (1,32,33)
 		 

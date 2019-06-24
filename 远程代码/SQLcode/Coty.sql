@@ -4,13 +4,13 @@
 	 
 	 insert into CotyRightsInfo values(17788031539,'o7_NJuCSJmLSkAhlaW_q-fwN3uh4',3,17201266,172,4,1,0,0,NULL)
 	 
-	 select top 10 * from CotyRightsInfo  where mobile='18501707917' ORDER BY id desc
+	 select top 10 * from CotyRightsInfo  where mobile='17788031539' ORDER BY id desc  --  98925460
 	 
 	 INSERT INTO [CotyRightsInfo]( [Mobile], [Openid], [BrandId], [UserId], [CrmEventDataId], [CampaignId], [RightType], [State], [Result], [UsedTime]) VALUES ( N'18501709317', N'o7_NJuJiBJKThlxCJQc7zuxgyvcw', 3, 0, 172, 4, 1, 0, 0,null);
 
  抽奖次数
  
- update CotyRightsInfo set state=0 where mobile in ('18501707917','17788031539')
+ update CotyRightsInfo set state=0,Result=0 where mobile in ('17788031539')
  
 	 粉丝表
 	 
@@ -20,7 +20,9 @@
 		 
 		 select id,openid,userid from WxFans where  nickname like '%那路逗%'
 		 
-		 update WxFans set userid=0 where Nickname='%iPhoneX18501707917%'
+		 未注册设置
+		 
+		 update WxFans set userid=0 where Nickname like '%那路逗%'
 		 
 		 会员等级
 		 
