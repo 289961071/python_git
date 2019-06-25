@@ -12,9 +12,9 @@
 
 				会员主表
 
-		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='15921825165'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
+		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='13917346687'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M
 
-		select * from sysuserinfo where Mobile='18501707127'  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
+		select * from sysuserinfo where Mobile='13917346687'  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
 		
 		UPDATE sysuserinfo set openid =''   where Mobile='15921825165'
 		
@@ -23,17 +23,21 @@
 
 				会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=510253920
+		select * from UserAttribute where userid=510253914
 		
-			修改领取动作
+					修改领取动作
 			
-			UPDATE UserAttribute set iscoupon=0 where userid=510253920
-
+			UPDATE UserAttribute set iscoupon=0 where userid=510253914
+					
+					会员等级
+					
+				UPDATE UserAttribute set level=0 where userid=510253921	
+			
 				卡券
 
-		select * from BusCoupon where openid='oIH_St-6zzHfYJLWMDdovZMj0AF4' and BusCouponCategoryId=1
+		select * from BusCoupon where openid='oUaMnw3A4yVs9haCOTOvpwOuM-i0' and BusCouponCategoryId=0
 
-		select * From NewCustCoupon WHERE unionid='o5Icn5xRzrtmzDdt685gC2EpGWMs'
+		select * From NewCustCoupon WHERE unionid='o5Icn59sZBfXSZBKAVzSZ9yjG120'
 
 				消费
 		
@@ -61,15 +65,15 @@
 		
 		INSERT INTO [dbo].[TEMP_ALL_V]([VIP_Mobile], [VIP_NO], [VIP_Name], [VIP_Gender], [VIP_Birthday], [Birth_M], [VIP_LastName], [VIP_FirstName], [VIP_Reg_Date], 			[VIP_Reg_Store_Cn], [RegStoreId], [Store_En], [Store_Code], [VIP_Pickup_Store], [VIP_Pickup_Store_Code], [VIP_Email], [Type], [累计消费金额], [首次消费时间], [最后一次消费时间], [消费次数], [近五个月的消费金额], [最后一次消费门店], [类型], [上个月类型], [Tag], [Tag2], [Style], [VipStartTime], [MemberStartTime], [BindTime], [OutletsShopCode], [OutletsTime], [OutletsUserCode], [IsSubscript], [Recent12MonthConsumption], [Recent24MonthConsumption], [最后一次消费门店中文名称], [近六个月的消费金额]) 		VALUES (N'18516120659', N'13823285082', N'小姐谈', N'女', NULL, NULL, N'谈', N'小姐', '2018-01-04', N'深圳金光华', 61, N'SZ Kingglory', N'KSS75503', N'深圳金光华', 			N'KSS75503', N'', N'M', 6000.00, '2018-01-04', '2018-01-04', 1,  1000.00, N'KSS75503', N'Lapsed', N'Lapsed', N'Handbag seeker', N'0R1H1S0J0S0T0F0L0O', NULL, NULL, '2018-01-04 11:27:00.000', NULL, NULL, NULL, NULL, NULL, NULL, 2304.00, N'深圳金光华', 6000.00);
 		
-		insert INTO TEMP_ALL_V VALUES ('18501709609', '13823285082', '小姐谈', '女', NULL, NULL, '谈', '小姐', '2018-01-04', '深圳金光华', 61, 'SZ Kingglory', 'KSS75503', '深圳金光华', 'KSS75503', N'', N'M', 6000.00, '2018-01-04', '2018-01-04', 1,  1000.00, N'KSS75503', N'Lapsed', N'Lapsed', N'Handbag seeker', N'0R1H1S0J0S0T0F0L0O', NULL, NULL, '2018-01-04 11:27:00.000', NULL, NULL, NULL, NULL, NULL, NULL, 2304.00, N'深圳金光华', 6000.00)
+		insert INTO TEMP_ALL_V VALUES ('13917346687', '13823285082', '小姐谈', '女', NULL, NULL, '谈', '小姐', '2018-01-04', '深圳金光华', 61, 'SZ Kingglory', 'KSS75503', '深圳金光华', 'KSS75503', N'', N'V', 6000.00, '2018-01-04', '2018-01-04', 1,  1000.00, N'KSS75503', N'Lapsed', N'Lapsed', N'Handbag seeker', N'0R1H1S0J0S0T0F0L0O', NULL, NULL, '2018-01-04 11:27:00.000', NULL, NULL, NULL, NULL, NULL, NULL, 2304.00, N'深圳金光华', 6000.00)
 		
 				消费金额
 		
-		select * from TEMP_ALL_V where VIP_Mobile='15921825165'
+		select * from TEMP_ALL_V where VIP_Mobile='13917346687'
 		
 				需要将交易记录的type 改为  V 
 		
-		UPDATE TEMP_ALL_V set Type='V'   WHERE  VIP_Mobile='18501709609'
+		UPDATE TEMP_ALL_V set Type='V'   WHERE  VIP_Mobile='13917346687'
 		
 				把usercode改回去
 		
@@ -79,14 +83,14 @@
 			
 		select * From NewCustCoupon
 
-		INSERT INTO [dbo].[NewCustCoupon]( [mobile], [openid], [unionid], [CouponPack], [CreateTime], [CouponState], [SendTime], [GetTime], [FirstBuyTime], [FansUpdateTime], [FirstConnState], [FirstConnTime], [SecondConnState], [SecondConnTime], [ThirdConnState], [ThirdConnTime], [MemberTime], [vip_type]) VALUES ('18501707127', 'oUaMnw_opPWHeP97xDJlZihj54Ek', 'o5Icn51jGsdCpqLlkP_7bsmzx0_M', 1, '2019-04-01 18:25:01.623', 0, NULL, NULL, '2019-03-26 22:07:04.793', '2019-04-01 18:25:01.623', 2, '2019-04-01 18:33:06.063', 2, '2019-04-01 18:51:53.907', 2, '2019-04-01 18:37:40.733', '2019-04-01 18:25:01.623', NULL);
+		INSERT INTO [dbo].[NewCustCoupon]( [mobile], [openid], [unionid], [CouponPack], [CreateTime], [CouponState], [SendTime], [GetTime], [FirstBuyTime], [FansUpdateTime], [FirstConnState], [FirstConnTime], [SecondConnState], [SecondConnTime], [ThirdConnState], [ThirdConnTime], [MemberTime], [vip_type]) VALUES ('13917346687', 'oUaMnw3A4yVs9haCOTOvpwOuM-i0', 'o5Icn59sZBfXSZBKAVzSZ9yjG120', 1, '2019-04-01 18:25:01.623', 0, NULL, NULL, '2019-03-26 22:07:04.793', '2019-04-01 18:25:01.623', 2, '2019-04-01 18:33:06.063', 2, '2019-04-01 18:51:53.907', 2, '2019-04-01 18:37:40.733', '2019-04-01 18:25:01.623', NULL);
 		
-		update NewCustCoupon set FirstBuyTime='2019-06-18 00:00:00',
-    FirstConnState=0,SecondConnState=0,ThirdConnState=0 where id=4
+		update NewCustCoupon set FirstBuyTime='2019-06-10 00:00:00',
+    FirstConnState=0,SecondConnState=0,ThirdConnState=0 where id=2
 
 删除 
 	
-		exec 	ll_test_shuju '15921825165'
+		exec 	ll_test_shuju '17788031539'
 	
 		drop procedure ll_test_shuju
 	
@@ -111,9 +115,9 @@
 								--删除交易数据
 								DELETE  FROM TEMP_ALL_V WHERE VIP_Mobile=@mobile;
 								--删除卡券
-								DELETE  from BusCoupon where openid=@openid and BusCouponCategoryId in (1,32,33);
-								--把usercode改回去
-								--UPDATE  sysuserinfo set  UserCode=@usercode where Mobile=@mobile;														
+								DELETE  from BusCoupon where openid=@openid and BusCouponCategoryId in (0,1,32,33);
+								--修改领取动作
+								UPDATE UserAttribute set iscoupon=0 where userid=@id;														
 							commit tran
 						end try
 						BEGIN catch				
@@ -224,6 +228,19 @@ select * from NewCustCoupon
 				短信内容
 			
 			
+			卡券类型
 			
+			select * from WXCardInfo where CardId 
+			in('pUaMnwylwzcGxFMlpP9p1gF1OO9M','pUaMnw2aeX8jXNWuxFGV63W4XZ5k','wedoCardId001','wedoCardId005',--大陆
+			'pUaMnw0wMK9ifQLTSvpcHZlyV5Ok','pUaMnwxw8M2g-mgv1pMknkqXkOos','wedoCardId002','wedoCardId006',--香港
+			'pUaMnw6apdOHtmQmSqH8tIRYXn-M','pUaMnw9_A0ra0s74mSfriC-oM_qI','wedoCardId004','wedoCardId008',--澳门
+			'pUaMnw5IPEOtHzn6BZrYaNmBk3jU','pUaMnw8qxQhGz35Nyl9kSVv-6k1Y','wedoCardId003','wedoCardId007')--台湾
+		 
+		 身份 
+		 
+		 
+		 
+		 
+		 
 		 
 		 
