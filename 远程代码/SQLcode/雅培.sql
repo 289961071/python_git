@@ -6,6 +6,7 @@
 
 		SELECT * FROM WXShop where datatype=3
 		
+		select * from CRMUser where mobile='13817187785'
 		
 	短信接口
 	
@@ -82,7 +83,7 @@
 		
 		刷步数
 		
-		select *from Run_Step where userid='oiNZm0u6DRggBfA5iGLOQq7wetCo' and rundate='2019-06-12'
+		select *from Run_Step where userid='ogb9a1BtyUgNeoUI7wYfswkxFblM' and rundate='2019-06-12'
 		
 		update Run_Step set step=315000  where  userid='oiNZm0udHtEdvRn9s7-1nM_tDAgg' and rundate='2019-06-12'
 		
@@ -208,9 +209,9 @@
 		
 		新客老客
 		
-		select * from CSRNewCustomer where mobile='13509690202' ORDER BY id desc   -- 新客
+		select * from CSRNewCustomer where mobile='13428992880' ORDER BY id desc   -- 新客
 		
-		select *from SysUserInfo where Mobile='13509690202'
+		select *from SysUserInfo where Mobile='13817187785'
 		
 		select top 10 * from [dbo].[CRMTaggedUser] where CustomerMobile='13509690202' ORDER BY id desc --老客
 		
