@@ -25,18 +25,11 @@
 #  *______#####______;###________###______#________
 #  *________##_______####________####______________
 #  */
-
-s='-'
-a=('a','b','c')
-print(s.join(a))
-
-L = [ 'xiaohong', '12', 'adf12', '14',u'晓明']
-
-for x in L:
-    try:
-        int(x)
-    except:
-        print(x)
-from cryptography.fernet import Fernet
-c = Fernet.generate_key()
-print(c)
+s=[
+     '1',
+     '2',
+    '4',
+    '3'
+]
+for i in s:
+    print(i)

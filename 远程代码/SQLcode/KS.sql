@@ -15,8 +15,11 @@ use  katespadewechat
 
 		会员主表
 
-		select  id,openid,unionid,mobile  from sysuserinfo where   Mobile='15921825165'-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
-		
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18017695729'    -- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
+	
+		select  * from UserAttribute where userid='10395331'
+	
+	
 		--activityshopcode 是正价 奥莱店 WXSHOP表
 		
 		select * from sysuserinfo where Mobile='15921825165'  --    oUaMnw9Cg3cSrnNKTNvJWVSWw2As
@@ -30,7 +33,7 @@ use  katespadewechat
 			查看正价还是奥莱
 			
 			select *from wxshop
-			
+			select * from BusProduct
 		会员附表  userID就是sysuserinfo 的id
 
 		select * from UserAttribute where userid=510253923
@@ -56,7 +59,7 @@ use  katespadewechat
 					UPDATE UserAttribute SET MemberStartTime='2019-03-08',point=6000 ,level=2 where userid=510253851
 			
 		卡券
-					select * from sysuserinfo WHERE Mobile='17788031539'   ---   oUaMnw9Cg3cSrnNKTNvJWVSWw2As
+					select * from sysuserinfo WHERE Mobile='18017695729'   ---   oUaMnw9Cg3cSrnNKTNvJWVSWw2As
 
 		select * from BusCoupon where openid='oUaMnw9Cg3cSrnNKTNvJWVSWw2As' 
 			
@@ -73,25 +76,31 @@ use  katespadewechat
 			
 				修改day1 day7 day14  没有就造数据  -- oUaMnwyz7oeam8mUpdLoJoig_7Xg    o5Icn51q5Dlu-aQHu0hB2UqDniFw
 			
-				select * From NewCustCoupon where mobile='15921825165'
+				select * From NewCustCoupon where mobile='18017695729'
 		
-				select * from ChgVipLevelHis  where mobile='18501707127' --15921825165 查看有没有手机 没有就不发短信
+				select * from ChgVipLevelHis  where mobile='' --15921825165 查看有没有手机 没有就不发短信
 
-				INSERT INTO [dbo].[NewCustCoupon]( [mobile], [openid], [unionid], [CouponPack], [CreateTime], [CouponState], [SendTime], [GetTime], [FirstBuyTime], [FansUpdateTime], [FirstConnState], [FirstConnTime], [SecondConnState], [SecondConnTime], [ThirdConnState], [ThirdConnTime], [MemberTime], [vip_type]) VALUES ('18516120659', 'oUaMnw_hRBnz_43X128sHIWNL9V8', 'o5Icn587BBEbE-cS_qc3epHRvk90', 1, '2019-04-01 18:25:01.623', 0, NULL, NULL, '2019-03-26 22:07:04.793', '2019-04-01 18:25:01.623', 2, '2019-04-01 18:33:06.063', 2, '2019-04-01 18:51:53.907', 2, '2019-04-01 18:37:40.733', '2019-04-01 18:25:01.623', '粉蜜会员');
+				INSERT INTO [dbo].[NewCustCoupon]( [mobile], [openid], [unionid], [CouponPack], [CreateTime], [CouponState], [SendTime], [GetTime], [FirstBuyTime], [FansUpdateTime], [FirstConnState], [FirstConnTime], [SecondConnState], [SecondConnTime], [ThirdConnState], [ThirdConnTime], [MemberTime], [vip_type]) VALUES ('18017695729', 'oIH_St_dMLhOLB8GNr4hrCz0asYo', 'oVTmZ1GSFpXFm2_c4VLikgXSgeZA', 1, '2019-04-01 18:25:01.623', 0, NULL, NULL, '2019-03-26 22:07:04.793', '2019-04-01 18:25:01.623', 2, '2019-04-01 18:33:06.063', 2, '2019-04-01 18:51:53.907', 2, '2019-04-01 18:37:40.733', '2019-04-01 18:25:01.623', '金卡会员');
 				
-				update NewCustCoupon set FirstBuyTime='2019-06-26 00:00:00',
-				FirstConnState=0,SecondConnState=0,ThirdConnState=0,vip_type='粉蜜会员',couponpack=23,CouponState=0 where id=2
+				update NewCustCoupon set FirstBuyTime='2019-06-30 00:00:00',
+				FirstConnState=0,SecondConnState=0,ThirdConnState=0,vip_type='金卡会员',couponpack=23,CouponState=0 where mobile='18017695729'
 				
+				UPDATE UserAttribute set level=3 where userid=10443336	
+				select * from UserAttribute where userid=10443336	
 				发新客 短信
 				
 				exec sp_genMsg4NewCust
 				 
 		生日礼  VIPDate 必须小于等于6.1 修改自己的生日为6月份  没有就insert
 				
-		select * from 	ChgVipLevelHis    -- ChgVipLevelHis VipLevel等级决定你拿什么样的生日礼
+		select * from 	ChgVipLevelHis where mobile='18017695729'    -- ChgVipLevelHis VipLevel等级决定你拿什么样的生日礼
 			
-					INSERT INTO [ChgVipLevelHis]( [SysUserInfoId], [Mobile], [VipLevel], [VipDate], [ExpiryDate], [UpgradeType], [Points], [CreateTime], [Remark]) VALUES ( 510253920, 		N'15921825165', 2, '2019-06-01', '2019-08-01', N'routine', 9999, '2019-06-25 00:00:00.000', N'手工测试');
-
+					INSERT INTO [ChgVipLevelHis]( [SysUserInfoId], [Mobile], [VipLevel], [VipDate], [ExpiryDate], [UpgradeType], [Points], [CreateTime], [Remark]) VALUES ( 10443336, 		N'18017695729', 3, '2019-07-01', '2019-08-01', N'routine', 9999, '2019-06-25 00:00:00.000', N'手工测试');
+					
+				UPDATE sysuserinfo SET birthday='2018-07-01',activeshopcode='kss02301' where Mobile='18017695729'
+				
+    	exec sp_genMsg4Birthday_M1
+			
 					update ChgVipLevelHis set VipLevel=4 where Mobile='15921825165'
 				
 				发生日礼
@@ -307,9 +316,13 @@ select * from NewCustCoupon
 		 
 		    交易记录
 				
-				select *from BusOrderDetail where busproductid >0 ORDER BY id desc
+				select top 100 *from BusOrderDetail where [BusProductId] >0 order by id desc
 				
 				
-				INSERT INTO [BusOrderDetail]( [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 1451, 1, 500.0000, 500.0000, '2018-01-09 12:58:00.000', 21, 510253939, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', .0000, N'', N'KSS02110', N'00006958', .0000, N'', N'', 0, NULL);
+				INSERT INTO [BusOrderDetail]([ [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 9, 1, 500.0000, 500.0000, '2017-01-09 12:58:00.000', 14, 10443336, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', .0000, N'', N'KSS02803', N'00006958', .0000, N'', N'', 0, NULL);
 
+				select * from WXShop order by id 
 				
+				select top 100 * from BusProduct order by id 
+				
+				select top 100 * from BusOrderDetail ORDER BY id desc
