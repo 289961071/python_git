@@ -15,10 +15,11 @@ use  katespadewechat
 
 		会员主表
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18017695729'    -- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18501703352'    -- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
 	
-		select  * from UserAttribute where userid='10395331'
-	
+		select  * from UserAttribute where userid='10416214'
+		
+		select * from BusCoupon where OpenId='oIH_Stz0IZfOg5aFRMieLT_Jnhoo'
 	
 		--activityshopcode 是正价 奥莱店 WXSHOP表
 		
@@ -326,3 +327,26 @@ select * from NewCustCoupon
 				select top 100 * from BusProduct order by id 
 				
 				select top 100 * from BusOrderDetail ORDER BY id desc
+				
+				select * from SysUserInfo where mobile='17788031539'
+				
+				 # 删除所有卡券
+     DELETE from BusCoupon where openid='oIH_StyRVo81WdCT8LC00mIRpi9c'
+    # 删除短信 因为短信不回重复发
+    "DELETE select * from SmsRecord where mobile='17788031539'
+    # 删除交易数据
+  
+    # "DELETE  from WXFans where  OpenId='oIH_StyRVo81WdCT8LC00mIRpi9c'
+    # 删除会员附表
+    DELETE  FROM UserAttribute  WHERE userid='10510503'
+		 select * BusCoupon where
+    delete select * from sysuserinfo where  Mobile='17788031539'
+  
+		
+		
+			select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18501703352'    
+			
+		select  * from UserAttribute where userid='10513207'
+		
+		select * from BusCoupon where SysUserInfoId='10513207'          OpenId='oIH_Stz0IZfOg5aFRMieLT_Jnhoo'
+		

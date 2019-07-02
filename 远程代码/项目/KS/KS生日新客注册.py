@@ -31,7 +31,7 @@ def shanchu(shouji):
     # 删除生日礼
     "delete from ChgVipLevelHis where Mobile=%s "%shouji,
     # 删除模板消息 视情况
-    "delete from WXTemplateMsgSend where FansOpenId=%s "%[0][1]
+    #"delete from WXTemplateMsgSend where FansOpenId=%s "%row[0][1]
     ]
     try:
         for i in sql:
@@ -143,6 +143,6 @@ def cs(shouji):
     cuesor.nextset()
     row1 =con.commit()
     print(cuesor.rowcount)
-cs('17788031539')
+shanchu('18501703352')
 cuesor.close()
 con.close()
