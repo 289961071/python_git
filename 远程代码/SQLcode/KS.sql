@@ -15,15 +15,17 @@ use  katespadewechat
 
 		会员主表
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18501703352'    -- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18017695729'  
+		
+		-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
 	
-		select  * from UserAttribute where userid='10416214'
+		select  * from UserAttribute where userid='10513873'
 		
 		select * from BusCoupon where OpenId='oIH_Stz0IZfOg5aFRMieLT_Jnhoo'
 	
 		--activityshopcode 是正价 奥莱店 WXSHOP表
 		
-		select * from sysuserinfo where Mobile='15921825165'  --    oUaMnw9Cg3cSrnNKTNvJWVSWw2As
+		select * from sysuserinfo where Mobile='18017695729'  --    oUaMnw9Cg3cSrnNKTNvJWVSWw2As
 		
 				update sysuserinfo set activeshopcode='kss02301' where mobile='15921825165'  --  正价  kss02301   奥莱  kss02202
 		
@@ -35,6 +37,10 @@ use  katespadewechat
 			
 			select *from wxshop
 			select * from BusProduct
+			select * from WXQRCodeLimit
+			
+			select * from HMTShopBindCard
+			
 		会员附表  userID就是sysuserinfo 的id
 
 		select * from UserAttribute where userid=510253923
@@ -322,13 +328,13 @@ select * from NewCustCoupon
 				
 				INSERT INTO [BusOrderDetail]([ [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 9, 1, 500.0000, 500.0000, '2017-01-09 12:58:00.000', 14, 10443336, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', .0000, N'', N'KSS02803', N'00006958', .0000, N'', N'', 0, NULL);
 
-				select * from WXShop order by id 
+				select * from WXShop  where code='KSS01010'  order by id 
 				
 				select top 100 * from BusProduct order by id 
 				
 				select top 100 * from BusOrderDetail ORDER BY id desc
 				
-				select * from SysUserInfo where mobile='17788031539'
+				select * from SysUserInfo where mobile='17780515110'
 				
 				 # 删除所有卡券
      DELETE from BusCoupon where openid='oIH_StyRVo81WdCT8LC00mIRpi9c'
@@ -342,11 +348,23 @@ select * from NewCustCoupon
 		 select * BusCoupon where
     delete select * from sysuserinfo where  Mobile='17788031539'
   
+		select * from wxfans where openid='oIH_St0_4Aj2hcqRPgOFsgmRK73E'
 		
-		
-			select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18501703352'    
+		select  id,openid,unionid,mobile,* from sysuserinfo where  Mobile='17780515110'    
 			
-		select  * from UserAttribute where userid='10513207'
+		select  * from UserAttribute where userid='10424197'
 		
-		select * from BusCoupon where SysUserInfoId='10513207'          OpenId='oIH_Stz0IZfOg5aFRMieLT_Jnhoo'
+		select * from BusCoupon where SysUserInfoId='10424197'         
+		
+		exec sys.sp_readerrorlog 0,1 ,'listening'
+		
+select BindTime,UnionId,openid,* from SysUserInfo where mobile='17780515110'
+select SourceId,CreateTime,* from WXFans where unionid='oVTmZ1A6OrbRmKNC7Tv9k3snTbuI'
+select * from MiniFans where unionid='oVTmZ1A6OrbRmKNC7Tv9k3snTbuI'
+select * from WXQRCodeLimit where WXSourceId=412
+select top 100* from WXMessageRecord where FromUserName='oIH_St0_4Aj2hcqRPgOFsgmRK73E' order by id desc
+select * from BusCoupon where Code='532894791981'
+select * from WXCardInfo where cardid='pIH_St1LXYlZ_bejsm1XrihqNVtQ'
+		
+		
 		
