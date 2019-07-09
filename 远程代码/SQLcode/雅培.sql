@@ -26,22 +26,37 @@
 
 		查昵称
 
-		select * FROM Customer WHERE id='oiNZm0pkAdIG-0nQIu-_5zJWMps8' or id='oiNZm0tMVxgMWrQha-bouDch7xTg'
-
+		select * FROM Customer WHERE id='ogb9a1FselRKRTlCdCe0N3qoRMXM' 
+		
 		delete from customer where id='oiNZm0l0hs5IReQyVhFI8lczbvT0'
 
 
 		根据id查绑定的好友  双向
 
-		select * from [dbo].[Run_UserFriend] WHERE Inviter='oiNZm0p_e31SvrTUi7bgOlANg1uM' or Inviter='oiNZm0l0hs5IReQyVhFI8lczbvT0'
-
+		select * from [dbo].[Run_UserFriend] a  ,Customer c join   WHERE Inviter='ogb9a1GH3P0MiWSyMWoF_BAec_3o' 
+		
+		select * from Run_UserFriend  WHERE Inviter='ogb9a1GH3P0MiWSyMWoF_BAec_3o' or BeInviter='ogb9a1GH3P0MiWSyMWoF_BAec_3o'
+		
+		order by inviter
+		
 		删除绑定的好友
 
 		DELETE  FROM Run_UserFriend WHERE beInviter='oiNZm0l0hs5IReQyVhFI8lczbvT0' and inviter='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
 
-		刷能量
+		刷能量  SourceType
+    {
+        兑换奖品 = 1,
+        参与挑战 = 2,
+        点赞 = 3,
+        邀请好友 = 4,
+        步数增加 = 5
+    }
 
-		select * from Run_EnergyRecord where userid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
+		select * from Run_EnergyRecord where userid='ogb9a1GH3P0MiWSyMWoF_BAec_3o' and SourceType=4
+		
+		select * from Run_EnergyRecord where total > '1000000'
+		
+		select * from Run_MyPrize where goodsid=1
 		
 		insert into Run_EnergyRecord (userid,sourcetype,val,total) VALUES ('oiNZm0pkAdIG-0nQIu-_5zJWMps8','5','10000000','10012554')
 
@@ -83,7 +98,7 @@
 		
 		刷步数
 		
-		select *from Run_Step where userid='ogb9a1BtyUgNeoUI7wYfswkxFblM' and rundate='2019-06-12'
+		select *from Run_Step where userid='ogb9a1OGFWkV1MdNddzLlAgq8iNQ' and rundate='2019-06-12'
 		
 		update Run_Step set step=315000  where  userid='oiNZm0udHtEdvRn9s7-1nM_tDAgg' and rundate='2019-06-12'
 		
@@ -91,13 +106,13 @@
 
 		删领取实物
 		
-		select * from Run_MyPrize where UserId='oiNZm0pkAdIG-0nQIu-_5zJWMps8' and GoodsId=1
+		select * from Run_MyPrize where GoodsId=1  UserId='oiNZm0pkAdIG-0nQIu-_5zJWMps8' and GoodsId=1
 
 		select * from [dbo].[Run_Goods]
 		
 		刷平均步数和天数等
 		
-		SELECT * from Run_Days where userid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
+		SELECT * from Run_Days where userid='ogb9a1OGFWkV1MdNddzLlAgq8iNQ'
 		
 		update Run_Days set RunAvgStep=12345 where userid='oiNZm0pkAdIG-0nQIu-_5zJWMps8'
 		

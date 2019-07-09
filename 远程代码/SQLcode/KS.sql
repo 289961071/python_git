@@ -6,7 +6,11 @@ use  katespadewechat
 		
 		select *  from WXFans where    Nickname like '%那路逗%'  ---  oUaMnwyz7oeam8mUpdLoJoig_7Xg
 		
-		select *  from WXFans where Nickname like '%heidi%' 
+		select openid,LastScanSourceId ,nickname from WXFans where openid='oIH_St9fs_0sUj-w4brO9GZnXHGw'
+		
+		select openid,LastScanSourceId ,nickname from WXFans where openid='oIH_StyRVo81WdCT8LC00mIRpi9c'
+		
+		select 
 		
 		DELETE  FROM WXFans where Nickname like '%heidi%'
 
@@ -15,13 +19,26 @@ use  katespadewechat
 
 		会员主表
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18017695729'  
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='17788031539'  
+		
+		select  * from UserAttribute where userid=10230754
+		
+		select * from BusCoupon where sysuserinfoid=10079576
+		
+		cs200
+		
+		select top 10 * from Raw_VIP_Full where vip_tel_2='13783714003'
+		
+			select top 10 * from Raw_VIP_Daily where vip_tel_2='13783714003'
+		
+		
+		update sysuserinfo set activeshopcode='kss02301' where Mobile='17788031539'  
 		
 		-- oUaMnw_opPWHeP97xDJlZihj54Ek  o5Icn51jGsdCpqLlkP_7bsmzx0_M 10000771
 	
 		select  * from UserAttribute where userid='10513873'
 		
-		select * from BusCoupon where OpenId='oIH_Stz0IZfOg5aFRMieLT_Jnhoo'
+		select * from BusCoupon where OpenId='oIH_StyLPrhOFvrVpWipiHrNY49g'
 	
 		--activityshopcode 是正价 奥莱店 WXSHOP表
 		
@@ -36,14 +53,16 @@ use  katespadewechat
 			查看正价还是奥莱
 			
 			select *from wxshop
+			
 			select * from BusProduct
-			select * from WXQRCodeLimit
+			
+			select * from WXQRCodeLimit where WXSourceId=153
 			
 			select * from HMTShopBindCard
 			
 		会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=510253923
+		select * from UserAttribute where userid=10406272
 		
 					修改领取动作
 			
@@ -358,7 +377,7 @@ select * from NewCustCoupon
 		
 		exec sys.sp_readerrorlog 0,1 ,'listening'
 		
-select BindTime,UnionId,openid,* from SysUserInfo where mobile='17780515110'
+select BindTime,UnionId,openid,* from SysUserInfo where mobile='18606501939'
 select SourceId,CreateTime,* from WXFans where unionid='oVTmZ1A6OrbRmKNC7Tv9k3snTbuI'
 select * from MiniFans where unionid='oVTmZ1A6OrbRmKNC7Tv9k3snTbuI'
 select * from WXQRCodeLimit where WXSourceId=412
@@ -366,5 +385,8 @@ select top 100* from WXMessageRecord where FromUserName='oIH_St0_4Aj2hcqRPgOFsgm
 select * from BusCoupon where Code='532894791981'
 select * from WXCardInfo where cardid='pIH_St1LXYlZ_bejsm1XrihqNVtQ'
 		
+		select top 100 * from [BusOrderDetail] where DiscountAmount<0 order by id desc
+		
+		select *from BusCoupon
 		
 		

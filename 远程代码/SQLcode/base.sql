@@ -23,7 +23,8 @@ SELECT NOW() FROM user1
 
 复制表 不要数据 1<>1 要数据不加条件
 
-select  * into user_log1  from user_log where 1<>1
+CREATE table 测试机(
+select  * into 测试机  from user1 where 1<>1)
 
 判断存在mysql
 SELECT TABLE_NAME FROM information_schema.TABLES WHERE  TABLE_NAME='Logapi' AND table_schema='AbbottDiabetesWeChat'

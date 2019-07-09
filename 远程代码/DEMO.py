@@ -25,7 +25,26 @@
 #  *______#####______;###________###______#________
 #  *________##_______####________####______________
 #  */
+import pandas, numpy
 
-str= input('大写：')
-if str=='':
-    print('你的年纪是 %s' %(str.lower()))
+id = [
+    'ogb9a1GH3P0MiWSyMWoF_BAec_3o',
+    'ogb9a1H9JJAK95K3QHUKfjB3yaaQ',
+    'ogb9a1FselRKRTlCdCe0N3qoRMXM',
+    'ogb9a1MI-4FrAFgqhB_F74oje5zw',
+    'ogb9a1KILmE2xMCPvJsXuAPERXug',
+    'ogb9a1NalGz_F3PL1sRYeKr8JaiE',
+    'ogb9a1FomDNQoks5HpRWlOft2TCs',
+    'ogb9a1HMTnqwSQ_y0lCvLbgsyP5E',
+    'ogb9a1HrrU42BdMyoMNSHvW3pN0s',
+    'ogb9a1OGFWkV1MdNddzLlAgq8iNQ'
+
+]
+
+
+def cs(shouji, sheet):
+    s = "select * from Run_UserFriend  WHERE Inviter=%s " % shouji
+    print(s)
+
+
+cs('ok',1)

@@ -143,6 +143,6 @@ def cs(shouji):
     cuesor.nextset()
     row1 =con.commit()
     print(cuesor.rowcount)
-shanchu('18501703352')
+shanchu('17788031539')
 cuesor.close()
 con.close()
