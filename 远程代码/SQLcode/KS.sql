@@ -10,16 +10,16 @@ use  katespadewechat
 		
 		select openid,LastScanSourceId ,nickname from WXFans where openid='oIH_StyRVo81WdCT8LC00mIRpi9c'
 		
-		select 
 		
-		DELETE  FROM WXFans where Nickname like '%heidi%'
+		
+	 select * FROM WXFans where openid='oIH_St9fs_0sUj-w4brO9GZnXHGw'
 
 		
 		UPDATE WXFans set memberid=0 where  Nickname like '%heidi%'
 
 		会员主表
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='17788031539'  
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18656134939'  
 		
 		select  * from UserAttribute where userid=10230754
 		

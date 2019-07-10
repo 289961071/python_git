@@ -24,27 +24,25 @@
 #  *_____#####________####______#####_____###______
 #  *______#####______;###________###______#________
 #  *________##_______####________####______________
-#  */
-import pandas, numpy
+#  *
+import pymssql, yaml, pandas,datetime
 
-id = [
-    'ogb9a1GH3P0MiWSyMWoF_BAec_3o',
-    'ogb9a1H9JJAK95K3QHUKfjB3yaaQ',
-    'ogb9a1FselRKRTlCdCe0N3qoRMXM',
-    'ogb9a1MI-4FrAFgqhB_F74oje5zw',
-    'ogb9a1KILmE2xMCPvJsXuAPERXug',
-    'ogb9a1NalGz_F3PL1sRYeKr8JaiE',
-    'ogb9a1FomDNQoks5HpRWlOft2TCs',
-    'ogb9a1HMTnqwSQ_y0lCvLbgsyP5E',
-    'ogb9a1HrrU42BdMyoMNSHvW3pN0s',
-    'ogb9a1OGFWkV1MdNddzLlAgq8iNQ'
+d = yaml.load(open(r'D:\Caps.yaml'))
+con = pymssql.connect(host=d['yp_server'], port=d['yp_port'], user=d['yp_user'], password=str(d['yp_pwd']),
+                      database=d['yp_db3'])
+cuesor = con.cursor()
+def cs(id,shouji):
+    # ！！！注意%s需要去掉引号，因为pymysql会自动为我们加上
+    sql1="select * from Run_UserFriend  WHERE Inviter='%s'"%(shouji)
+    sql="select CreatorTime,ModifierTime,NickName FROM Customer WHERE id= '%s'and Mobile='%s'"%(id,shouji)
+    cuesor.execute(sql)
+    row = cuesor.fetchall()
+    print(row)
 
-]
+for i in range (1,4):
+    cs('ogb9a1FselRKRTlCdCe0N3qoRMXM','13974805663')
 
+print('ok')
 
-def cs(shouji, sheet):
-    s = "select * from Run_UserFriend  WHERE Inviter=%s " % shouji
-    print(s)
-
-
-cs('ok',1)
+cuesor.close()
+con.close()

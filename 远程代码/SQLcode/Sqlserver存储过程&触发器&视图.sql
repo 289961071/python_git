@@ -260,3 +260,10 @@ end try
 BEGIN catch
 	ROLLBACK TRAN
 end catch
+
+临时表  全局临时表创建方式就是把上面的一个#改为两个#就可以了哈~
+
+select *into #ok from user_log
+
+select * from #ok
+
