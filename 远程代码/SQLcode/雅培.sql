@@ -26,7 +26,7 @@
 
 		查昵称
 
-		select * FROM Customer WHERE id='ogb9a1FselRKRTlCdCe0N3qoRMXM' 
+		select CreatorTime,ModifierTime,NickName FROM Customer WHERE id='ogb9a1FselRKRTlCdCe0N3qoRMXM' and Mobile='13974805663'
 		
 		delete from customer where id='oiNZm0l0hs5IReQyVhFI8lczbvT0'
 

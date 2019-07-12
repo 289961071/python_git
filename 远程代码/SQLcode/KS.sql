@@ -19,11 +19,13 @@ use  katespadewechat
 
 		会员主表
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18656134939'  
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='15921825165'  
 		
-		select  * from UserAttribute where userid=10230754
+		select  * from UserAttribute where userid=10517125
 		
-		select * from BusCoupon where sysuserinfoid=10079576
+			UPDATE sysuserinfo SET birthday='1974-06-13' where  Mobile='13816102444' 
+		
+		select id,openid,NickName,sex,city,LastScanSourceId from WXFans where openid='oIH_St-6zzHfYJLWMDdovZMj0AF4'
 		
 		cs200
 		
@@ -78,7 +80,7 @@ use  katespadewechat
 			
 					生日
 				
-					UPDATE sysuserinfo SET birthday='2018-06-01' where Mobile='15921825165'
+					UPDATE sysuserinfo SET birthday='2018-06-01' where Mobile='10086402'
 					
 					入会时间和积分 等级
 		
@@ -342,10 +344,12 @@ select * from NewCustCoupon
 		 
 		    交易记录
 				
-				select top 100 *from BusOrderDetail where [BusProductId] >0 order by id desc
+				select top 100 *from BusOrderDetail where SysUserInfoid=510253977     [BusProductId] >0 order by id desc
 				
-				
-				INSERT INTO [BusOrderDetail]([ [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 9, 1, 500.0000, 500.0000, '2017-01-09 12:58:00.000', 14, 10443336, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', .0000, N'', N'KSS02803', N'00006958', .0000, N'', N'', 0, NULL);
+					select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18501709317'   '15921825165'  
+					update UserAttribute set LEVEL=2 where userid=510253977
+					
+				INSERT INTO [BusOrderDetail]( [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 9, 1, 500.0000, 500.0000, '2019-01-09 12:58:00.000', 14, 510253977, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', 66.1100, N'', N'KSS02803', N'00006958', .0000, N'', N'', 0, NULL);
 
 				select * from WXShop  where code='KSS01010'  order by id 
 				
@@ -366,12 +370,14 @@ select * from NewCustCoupon
     DELETE  FROM UserAttribute  WHERE userid='10510503'
 		 select * BusCoupon where
     delete select * from sysuserinfo where  Mobile='17788031539'
-  
+		
+		UPDATE sysuserinfo SET birthday='1900-07-30' where  Mobile='15755195280' 
+		
 		select * from wxfans where openid='oIH_St0_4Aj2hcqRPgOFsgmRK73E'
 		
-		select  id,openid,unionid,mobile,* from sysuserinfo where  Mobile='17780515110'    
+		select  id,openid,unionid,mobile,* from sysuserinfo where  Mobile='15755195280'    
 			
-		select  * from UserAttribute where userid='10424197'
+		select  * from UserAttribute where userid='10301074'
 		
 		select * from BusCoupon where SysUserInfoId='10424197'         
 		
