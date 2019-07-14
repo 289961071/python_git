@@ -25,7 +25,7 @@
 #  *______#####______;###________###______#________
 #  *________##_______####________####______________
 #  */
-import pandas, numpy
+# import pandas, numpy
 
 id = [
     'ogb9a1GH3P0MiWSyMWoF_BAec_3o',
@@ -36,15 +36,12 @@ id = [
     'ogb9a1NalGz_F3PL1sRYeKr8JaiE',
     'ogb9a1FomDNQoks5HpRWlOft2TCs',
     'ogb9a1HMTnqwSQ_y0lCvLbgsyP5E',
-    'ogb9a1HrrU42BdMyoMNSHvW3pN0s',
-    'ogb9a1OGFWkV1MdNddzLlAgq8iNQ'
-
 ]
 
 
-def cs(shouji, sheet):
+def cs(shouji):
     s = "select * from Run_UserFriend  WHERE Inviter=%s " % shouji
     print(s)
 
 
-cs('ok',1)
+cs('ok')
