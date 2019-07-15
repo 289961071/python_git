@@ -270,11 +270,19 @@ select * from NewCustCoupon
 		 
 		 模板消息
 		 
-	 select openid from sysuserinfo where Mobile='15921825165'  --  oIH_StyRVo81WdCT8LC00mIRpi9c   heidi      oIH_St-6zzHfYJLWMDdovZMj0AF4
+		select top 10 * from VIP_SalesInfo where  mobile='92115572'
+		
+	 select openid ,*from sysuserinfo where Mobile='92115572' 
+	
+		select * from wxfans where openid='oIH_StyWjyNqldgoMoDRWZGGGz5A'
 		 
-	 select * from WXTemplateMsg where id=1  
+	 select * from WXTemplateMsg where id=9 
 	 
 	  select * from WXTemplateMsgInfo
+	 
+	  select  w.createtime,s.mobile from WXTemplateMsgSend w, sysuserinfo s where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-06-30 23:59:00' and w.FansOpenId=s.openid order by w.id
+		
+		select 
 	 
 	 修改关注状态 没关注才发短信
 	 
@@ -383,8 +391,10 @@ select * from NewCustCoupon
 		
 		exec sys.sp_readerrorlog 0,1 ,'listening'
 		
-select BindTime,UnionId,openid,* from SysUserInfo where mobile='18606501939'
-select SourceId,CreateTime,* from WXFans where unionid='oVTmZ1A6OrbRmKNC7Tv9k3snTbuI'
+select BindTime,UnionId,openid,* from SysUserInfo where mobile='15800838638'
+select LastScanSourceId,CreateTime,* from WXFans where openid='oIH_St0yaqwd79_vJvgInGLoFfgg'
+
+select SourceId,CreateTime,* from WXFans where UnionId='oVTmZ1CgEzG6Fqqz6YhemtgH6kE8'
 select * from MiniFans where unionid='oVTmZ1A6OrbRmKNC7Tv9k3snTbuI'
 select * from WXQRCodeLimit where WXSourceId=412
 select top 100* from WXMessageRecord where FromUserName='oIH_St0_4Aj2hcqRPgOFsgmRK73E' order by id desc
