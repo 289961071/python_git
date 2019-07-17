@@ -8,7 +8,7 @@ use  katespadewechat
 
 		会员主表  Mobile
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13818550320'  	
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13238417797'  	
 		修改生日
 			UPDATE sysuserinfo SET birthday='1974-06-13' where  Mobile='13816102444' 
 		修改活跃门店  --正价  kss02301   奥莱  kss02202
@@ -35,7 +35,7 @@ use  katespadewechat
 			
 		会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=10406272
+		select * from UserAttribute where userid=10517260
 		
 					修改领取动作
 			
@@ -105,7 +105,7 @@ use  katespadewechat
 				
 	消费
 		
-		造消费数据
+		造消费数据 暂时不用这个表
 		
 		insert INTO TEMP_ALL_V VALUES ('13917346687', '13823285082', '小姐谈', '女', NULL, NULL, '谈', '小姐', '2018-01-04', '深圳金光华', 61, 'SZ Kingglory', 'KSS75503', '深圳金光华', 'KSS75503', N'', N'V', 6000.00, '2018-01-04', '2018-01-04', 1,  1000.00, N'KSS75503', N'Lapsed', N'Lapsed', N'Handbag seeker', N'0R1H1S0J0S0T0F0L0O', NULL, NULL, '2018-01-04 11:27:00.000', NULL, NULL, NULL, NULL, NULL, NULL, 2304.00, N'深圳金光华', 6000.00)
 		
