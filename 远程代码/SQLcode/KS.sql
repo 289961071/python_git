@@ -8,7 +8,7 @@ use  katespadewechat
 
 		会员主表  Mobile
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13238417797'  	
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13418111510'  	
 		修改生日
 			UPDATE sysuserinfo SET birthday='1974-06-13' where  Mobile='13816102444' 
 		修改活跃门店  --正价  kss02301   奥莱  kss02202
@@ -59,7 +59,7 @@ use  katespadewechat
 			
 		卡券 openid
 				
-		select * from BusCoupon where openid='oUaMnw9Cg3cSrnNKTNvJWVSWw2As' 
+		select * from BusCoupon where openid='oIH_St2Ds4JoZgehtvE9iRW4OlLs' 
 			
 					删除领取的卡券
 				
