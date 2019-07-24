@@ -8,7 +8,7 @@ use  katespadewechat
 
 		会员主表  Mobile
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13418111510'  	
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13828866352'  	
 		修改生日
 			UPDATE sysuserinfo SET birthday='1974-06-13' where  Mobile='13816102444' 
 		修改活跃门店  --正价  kss02301   奥莱  kss02202
@@ -18,7 +18,7 @@ use  katespadewechat
 		
 		cs200 hmt用户 vip_tel_2
 		
-		select top 10 * from Raw_VIP_Full where vip_tel_2='13783714003'
+		select top 10 * from Raw_VIP_Full where vip_tel_2='13718879728'
 		
 	
 		--activityshopcode 是正价 奥莱店 WXSHOP表
@@ -35,7 +35,7 @@ use  katespadewechat
 			
 		会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=10517260
+		select * from UserAttribute where userid=10440554
 		
 					修改领取动作
 			
@@ -241,7 +241,20 @@ use  katespadewechat
 
 				select top 100 * from BusProduct order by id 
 				
-     
+     日志
+		 
+		 select top 1000 * from LogApi
+
+			order by id desc
+
+
+			select top 1000 * from LogRun
+			order by id desc
+
+
+			select top 100 * from WXTemplateMsgSend order by id desc
+
+			select top 100 * from SmsRecord order by id desc
 		
 		exec sys.sp_readerrorlog 0,1 ,'listening'
 		
