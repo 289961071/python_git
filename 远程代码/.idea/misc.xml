@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (远程代码)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.5.0 (C:\Program Files\Python 3.5\python.exe)" project-jdk-type="Python SDK" />
+>>>>>>> 1a15c0d90758bb36e24eebaf4e6eca5c3964f2c7
   <component name="PyCharmProfessionalAdvertiser">
     <option name="shown" value="true" />
   </component>
