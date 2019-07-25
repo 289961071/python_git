@@ -1,11 +1,11 @@
 # coding=utf-8
 # 李路
-import jieba
+import jieba,pandas
 from matplotlib import pyplot as plt
 from wordcloud import ImageColorGenerator,STOPWORDS,WordCloud
 from scipy.misc import imread # 这是一个处理图像的函数
 
-back_color=imread('a.jpg') # 解析该图片
+back_color=imread('timg.jpg') # 解析该图片
 
 wc = WordCloud(background_color='white',  # 背景颜色
                scale=32,#scale属性，该值越大越清楚
@@ -22,11 +22,13 @@ wc = WordCloud(background_color='white',  # 背景颜色
                )
 # 添加自己的词库分词，比如添加'金三胖'到jieba词库后，当你处理的文本中含有金三胖这个词，
 # 就会直接将'金三胖'当作一个词，而不会得到'金三'或'三胖'这样的词
-jieba.add_word('大师兄')
+jieba.add_word('习近平')
 # 打开词源的文本文件
-text = open(r'd:\b站弹幕.csv','r',encoding='utf-8').read()
+text = open(r'd:\b站弹幕2.csv','r',encoding='utf-8').read()
+f=pandas.read_csv(r'd:\b站弹幕2.csv')
+f1=pandas.DataFrame(f,columns='弹幕')
 #加载文本
-wc.generate(text)
+wc.generate(f1)
 # 基于彩色图像生成相应彩色
 # image_colors = ImageColorGenerator(back_color)
 plt.imshow(wc)

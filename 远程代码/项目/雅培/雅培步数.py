@@ -13,7 +13,7 @@ cuesor = con.cursor()
 file = pandas.ExcelWriter(r'd:\a.xls')
 def cs(shouji,sheet):
     # ！！！注意%s需要去掉引号，因为pymysql会自动为我们加上，屁，得加上
-    sql1="select * from Run_UserFriend  WHERE Inviter=%s"%(shouji)
+    sql1="delete from JoinNumber where openid='%s'"%(shouji)
     sql="select CreatorTime,ModifierTime,NickName FROM Customer WHERE id= '%s'",str(shouji)
     cuesor.execute(sql)
     row = cuesor.fetchall()

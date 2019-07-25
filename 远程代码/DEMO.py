@@ -40,9 +40,8 @@ id = [
 ]
 =======
 #  *
-import pandas, numpy
-import matplotlib.pyplot as plt
 
+<<<<<<< HEAD
 def cs1():
     # 导入CSV xlsx
     df = pandas.DataFrame(pandas.read_excel(r'd:\a.xls'))
@@ -120,3 +119,7 @@ def cs5():
     plt.show()
 cs5()
 >>>>>>> 1a15c0d90758bb36e24eebaf4e6eca5c3964f2c7
+=======
+a=[x for  x in range(6)]
+print(a)
+>>>>>>> dd40c942913e98c4a8647a8fdde5e836af70cef8

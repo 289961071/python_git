@@ -15,21 +15,21 @@ def shanchu(shouji):
     print(row)
     sql=[
     # 删除所有卡券
-    "DELETE from BusCoupon where openid=%s"%row[0][1],
+    "DELETE from BusCoupon where openid='%s'"%row[0][1],
     # 删除短信 因为短信不回重复发
-    "DELETE from SmsRecord where mobile=%s "%shouji,
+    "DELETE from SmsRecord where mobile='%s'"%shouji,
     # 删除交易数据
-    "DELETE  FROM TEMP_ALL_V WHERE VIP_Mobile=%s "%shouji,
+    "DELETE  FROM TEMP_ALL_V WHERE VIP_Mobile='%s' "%shouji,
     # 删除粉丝表 视情况而定，如果删除，一定要取关
     # "DELETE  from WXFans where  OpenId=%s"%row[0][1],
     # 删除会员附表
      "DELETE  FROM UserAttribute  WHERE userid=%s"%row[0][0],
     # 删除会员主表
-    "delete from sysuserinfo where  Mobile=%s "%shouji,
+    "delete from sysuserinfo where  Mobile='%s' "%shouji,
     # 删除新客礼
-    "delete from NewCustCoupon where mobile=%s "%shouji,
+    "delete from NewCustCoupon where mobile='%s' "%shouji,
     # 删除生日礼
-    "delete from ChgVipLevelHis where Mobile=%s "%shouji,
+    "delete from ChgVipLevelHis where Mobile='%s' "%shouji,
     # 删除模板消息 视情况
     #"delete from WXTemplateMsgSend where FansOpenId=%s "%row[0][1]
     ]
@@ -143,6 +143,6 @@ def cs(shouji):
     cuesor.nextset()
     row1 =con.commit()
     print(cuesor.rowcount)
-shanchu('17788031539')
+shanchu('18501707127')
 cuesor.close()
 con.close()
