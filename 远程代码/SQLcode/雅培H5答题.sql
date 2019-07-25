@@ -14,9 +14,9 @@ INSERT INTO [JoinNumber]( [OpenId], [CreateTime], [IsAllRight], [EndTime], [Time
 select * from RebirthCard 
 
 --用户
-select *  from Customer where  openid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
+select *  from Customer where  openid='ol56vwyhceW-n7nlV63JktG0-dX4'
 
-update Customer set InviteCount=0, Mobile='' where openid='ol56vwyhceW-n7nlV63JktG0-dX4'
+update Customer set LotteryCount=0, Mobile='' where openid='ol56vwyhceW-n7nlV63JktG0-dX4'
 
 --抽奖次数 select * from JoinNumber where openid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
 delete from JoinNumber where openid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
@@ -24,13 +24,13 @@ delete from JoinNumber where openid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
 delete from LotteryRecord where userid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
 --关系表 select *from RebirthCard where CustomerOpenId='ol56vwxTMwisjDZ80hx8HGqOtq1w' or CurrOpenId='ol56vwxTMwisjDZ80hx8HGqOtq1w'
 delete  from RebirthCard where CustomerOpenId='ol56vw8nqowrwRYxfzMvE6MjTCus' or CurrOpenId='ol56vw8nqowrwRYxfzMvE6MjTCus'
---答题
-delete from AnswerRecord where openid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
+--答题 select *from AnswerRecord where openid='ol56vwyCcrpfDvQDsvqchSieN2cY'
+delete from AnswerRecord where openid='ol56vwyCcrpfDvQDsvqchSieN2cY'
 
 题目和答案
 
-SELECT s.OptionName, t.id from SuervyTitle t,SuervyOption s where t.TitleName like '%夏季运动%' and t.Id=s.TitleId and s.IsRight=1
-
+select TitleName,len(TitleName),id from SuervyTitle ORDER BY len(TitleName) desc
+select Optionname,len(Optionname) from SuervyOption ORDER BY len(Optionname) desc
 select * from SuervyTitle where TitleName like '%夏季运动%'
 
 SELECT * from SuervyOption where TitleId=173

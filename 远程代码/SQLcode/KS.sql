@@ -2,13 +2,16 @@ use  katespadewechat
 
 		粉丝表查看关注  openid
 		
-		select openid,LastScanSourceId ,nickname from WXFans where openid='oIH_StyRVo81WdCT8LC00mIRpi9c'
+		select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,* from WXFans where openid='oIH_Stx3-4vAN4vYX67oXCGA3Zuw'
+		
 		置空
 		UPDATE WXFans set memberid=0 where  Nickname like '%heidi%'
 
 		会员主表  Mobile
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='13828866352'  	
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18336392189'  
+			UPDATE UserAttribute SET point=8000,level=3   where userid=10523703
+			update sysuserinfo set usercode='KS201926275' where  Mobile='17788031539'  
 		修改生日
 			UPDATE sysuserinfo SET birthday='1974-06-13' where  Mobile='13816102444' 
 		修改活跃门店  --正价  kss02301   奥莱  kss02202
@@ -25,17 +28,19 @@ use  katespadewechat
 			
 			查看正价还是奥莱
 			
-			select *from wxshop
+			select *from wxshop where code='kss02701'
 			
-			select * from BusProduct
+			select * from BusProduct 
 			
-			select * from WXQRCodeLimit where WXSourceId in (156,102)
+			select * from WXQRCodeLimit where WXShopid=16
 			
 			select * from HMTShopBindCard where 
 			
+			select p.code,t.WXsourceid ,t.name,t.remark from wxshop p, WXQRCodeLimit t where p.code in ('kss02701','KSS02114') and p.id=t.wxshopid
+			
 		会员附表  userID就是sysuserinfo 的id
 
-		select * from UserAttribute where userid=10440554
+		select * from UserAttribute where userid=10510506
 		
 					修改领取动作
 			
@@ -47,7 +52,7 @@ use  katespadewechat
 					
 					会员积分
 		
-					UPDATE UserAttribute SET point=6000  where userid=510253850
+					UPDATE UserAttribute SET point=6000,level=2   where userid=10510506
 			
 					生日
 				
@@ -177,7 +182,8 @@ use  katespadewechat
 		
 	 select * from WXTemplateMsg where id=9 
 	 
-	  select * from WXTemplateMsgInfo
+	  select * from WXTemplateMsgInfo ORDER BY id desc
+		
 	 需要拉取的数据
 	  select  w.createtime,s.mobile from WXTemplateMsgSend w, sysuserinfo s where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-06-30 23:59:00' and w.FansOpenId=s.openid order by w.id
 		
@@ -199,8 +205,8 @@ use  katespadewechat
 		 
 		 use KateSpadeWeChat
 		 
-		 
-		  select  * from SmsRecord where mobile='17788031539'  order by id desc
+		 验证码
+		  select  * from SmsRecord   order by id desc
 		
 		 
 			发送短信 首购时间

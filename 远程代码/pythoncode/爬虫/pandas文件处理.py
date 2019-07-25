@@ -18,6 +18,11 @@ def demo3():
     file = pandas.ExcelWriter(r'd:\a.xls')
     f1 = pandas.DataFrame(numpy.random.randn(365, 4))
     f2 = pandas.DataFrame(numpy.random.randn(365, 4))
+    # print(df[1:6])
+    # print('index:',df[1:6].index)
+    # print('columns:',df[1:6].columns)
+    # print('values:',df[1:6].values)
+    # a=df[1:6].values
     # for i in range(1,4):
     f1.to_excel(excel_writer=file, sheet_name=str(1), encoding='utf-8')
     f2.to_excel(excel_writer=file, sheet_name=str(2), encoding='utf-8')
