@@ -64,5 +64,5 @@ def demo():
 # 张綝 Sophia   ol56vw8nqowrwRYxfzMvE6MjTCus
 # OPPOfindX😊   ol56vwyhceW-n7nlV63JktG0-dX4
 # 沃家小编1234578979446   ol56vw9JT-DxDYYaZPdgcamFHTbo
-print(shanchu('ol56vw0RHmt_ryOuwWZtmlHaGQwg'))
+print(shanchu('ol56vwxTMwisjDZ80hx8HGqOtq1w'))
 

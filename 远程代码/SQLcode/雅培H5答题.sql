@@ -1,6 +1,6 @@
 use abbott_suervy190715
 
-select * from customer 
+select * from customer  GROUP BY OpenId    having  COUNT(nickname)>1 like '%vivo%'
 
 update Customer set mobile='' where mobile='17788031539'
 
@@ -22,7 +22,7 @@ update Customer set LotteryCount=0, Mobile='' where openid='ol56vwyhceW-n7nlV63J
 delete from JoinNumber where openid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
 --奖品 select * from LotteryRecord where userid='ow_TXjswyzK39eQ9H-pK7AbWkBe8'
 delete from LotteryRecord where userid='ol56vwxTMwisjDZ80hx8HGqOtq1w'
---关系表 select *from RebirthCard where CustomerOpenId='ol56vwxTMwisjDZ80hx8HGqOtq1w' or CurrOpenId='ol56vwxTMwisjDZ80hx8HGqOtq1w'
+--关系表 select *from RebirthCard where CustomerOpenId='ol56vwzbgaj6BQMe6uNOjJCYEUkA' or CurrOpenId='ol56vwzbgaj6BQMe6uNOjJCYEUkA'
 delete  from RebirthCard where CustomerOpenId='ol56vw8nqowrwRYxfzMvE6MjTCus' or CurrOpenId='ol56vw8nqowrwRYxfzMvE6MjTCus'
 --答题 select *from AnswerRecord where openid='ol56vwyCcrpfDvQDsvqchSieN2cY'
 delete from AnswerRecord where openid='ol56vwyCcrpfDvQDsvqchSieN2cY'

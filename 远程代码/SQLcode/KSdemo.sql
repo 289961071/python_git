@@ -1,12 +1,12 @@
-select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile in ('13689088344')
+select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile in ('13398115958')
 
 select top 10  LastScanSourceId,CreateTime,* from WXFans where openid in ('oIH_StyRVo81WdCT8LC00mIRpi9c' ,'oIH_St_Xcz23RfqjXUCFBNOyqLkw')
 
 select * from UserAttribute where userid=10517260
 		
-select * From NewCustCoupon where mobile='13238417797'
+ delete  select * From NewCustCoupon where mobile='13238417797' 
 		
-select * from BusOrderDetail where SysUserInfoid=10517260
+select *  from BusOrderDetail where SysUserInfoid=510253982 and id>200
 
 select * from [交易数据整合] where mobile='13238417797'
 			
@@ -22,27 +22,25 @@ select * from BusCoupon where openid='oIH_St6W8_Fo-NiSXE92hX8y7Dnk'
 
 select b.code,s.mobile from BusCoupon b, SysUserInfo s  where s.openid=b.openid and s.mobile 
 in (
-'13418111510',
-'13928872228',
-'18520686885',
-'15800611598',
-'15995550024',
-'18701777116',
-'18516356534',
-'15802138818',
-'13917993180',
-'13831099688',
-'15080743632',
-'18737500999',
-'13689088344',
-'13689088344',
-'15011518150',
-'18737500999',
 '18615705957',
-'13512295359',
-'18601984501',
-'15122253611',
-'13685878878',
-'15650709450',
-'18611824566'
+'18701777116',
+'18737500999',
+'18611824566',
+'18602851769',
+'18673189948',
+'18702892998',
+'13262285883',
+'15104799429',
+'18015585900',
+'13398115958',
+'13907167990'
 )
+
+
+select  id,openid,unionid,mobile,CreateDate,* from sysuserinfo where   Mobile in ('18615705957')
+
+
+select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,SubscribeTime,* from WXFans where openid='oIH_StwDfoTkC0fO1j5nKgwmJCnA'
+
+
+

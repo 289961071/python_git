@@ -2,14 +2,14 @@ use  katespadewechat
 
 		粉丝表查看关注  openid
 		
-		select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,* from WXFans where openid='oIH_Stx3-4vAN4vYX67oXCGA3Zuw'
+		select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,* from WXFans where openid='oIH_St__uL5rk0bEgCSXCd_KbRn4'
 		
 		置空
 		UPDATE WXFans set memberid=0 where  Nickname like '%heidi%'
 
 		会员主表  Mobile
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18336392189'  
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18015585900'  
 			UPDATE UserAttribute SET point=8000,level=3   where userid=10523703
 			update sysuserinfo set usercode='KS201926275' where  Mobile='17788031539'  
 		修改生日
@@ -32,8 +32,7 @@ use  katespadewechat
 			
 			select * from BusProduct 
 			
-			select * from WXQRCodeLimit where WXShopid=16
-			
+			select * from WXQRCodeLimit where WXSourceid=414
 			select * from HMTShopBindCard where 
 			
 			select p.code,t.WXsourceid ,t.name,t.remark from wxshop p, WXQRCodeLimit t where p.code in ('kss02701','KSS02114') and p.id=t.wxshopid
