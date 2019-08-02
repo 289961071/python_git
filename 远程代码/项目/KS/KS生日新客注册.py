@@ -115,15 +115,15 @@ def shengrili(shouji):
     print(row)
     # 设置 生日 根据当前月份  门店 正价还是 奥莱
     sql=[
-    "UPDATE sysuserinfo SET birthday='2018-07-01',activeshopcode='kss02301' where Mobile=%s "%shouji,
+    "UPDATE sysuserinfo SET birthday='2018-08-01',activeshopcode='kss02301' where Mobile='%s' "%shouji,
     # 删除卡券
-    "delete  from BusCoupon where openid=%s"%row[0][1],
+    "delete  from BusCoupon where openid='%s'"%row[0][1],
     # 更新等级 会员到期时间
-    "UPDATE UserAttribute set Level=3 , LevelExpiredDate='2019-07-27 00:00:00' where UserId=%s"%row[0][0],
-    "delete  from ChgVipLevelHis where Mobile=%s "%shouji,
+    "UPDATE UserAttribute set Level=3 , LevelExpiredDate='2019-08-27 00:00:00' where UserId=%d"%row[0][0],
+    "delete  from ChgVipLevelHis where Mobile='%s' "%shouji,
     # ChgVipLevelHis VipLevel等级决定你拿什么样的生日礼
      "INSERT INTO [ChgVipLevelHis]( [SysUserInfoId], [Mobile], [VipLevel], [VipDate], [ExpiryDate], [UpgradeType], [Points], [CreateTime],"
-     " [Remark]) VALUES ( %s, %s, 3, '2019-07-01', '2019-08-01', 'routine', 9999, '2019-06-25 00:00:00.000', '手工测试')"%(row[0][0],shouji),
+     " [Remark]) VALUES ( %d, '%s', 3, '2019-07-01', '2019-08-01', 'routine', 9999, '2019-06-25 00:00:00.000', '手工测试')"%(row[0][0],shouji),
     "exec sp_genMsg4Birthday_M1"
     ]
     try:
@@ -143,6 +143,6 @@ def cs(shouji):
     cuesor.nextset()
     row1 =con.commit()
     print(cuesor.rowcount)
-shanchu('18501707127')
+shengrili('17788031539')
 cuesor.close()
 con.close()

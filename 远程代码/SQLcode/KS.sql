@@ -9,7 +9,7 @@ use  katespadewechat
 
 		会员主表  Mobile
 
-		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18015585900'  
+		select  id,openid,unionid,mobile,* from sysuserinfo where   Mobile='18501709317'  
 			UPDATE UserAttribute SET point=8000,level=3   where userid=10523703
 			update sysuserinfo set usercode='KS201926275' where  Mobile='17788031539'  
 		修改生日
@@ -63,7 +63,7 @@ use  katespadewechat
 			
 		卡券 openid
 				
-		select * from BusCoupon where openid='oIH_St2Ds4JoZgehtvE9iRW4OlLs' 
+		select top  200* from BusCoupon where sendtime>'2019-07-31' and  order by  id  desc 
 			
 					删除领取的卡券
 				
@@ -184,9 +184,9 @@ use  katespadewechat
 	  select * from WXTemplateMsgInfo ORDER BY id desc
 		
 	 需要拉取的数据
-	  select  w.createtime,s.mobile from WXTemplateMsgSend w, sysuserinfo s where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-06-30 23:59:00' and w.FansOpenId=s.openid order by w.id
+	  select  w.createtime,s.mobile from WXTemplateMsgSend w, sysuserinfo s where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-07-30 23:59:00' and w.FansOpenId=s.openid order by w.id
 		
-
+		select  count(*) from WXTemplateMsgSend w, sysuserinfo s where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-07-30 23:59:00' and w.FansOpenId=s.openid order by w.id
 	 修改关注状态 没关注才发短信
 	 
 	 select  top 20 * from WXTemplateMsgSend  ORDER BY id desc    --   oUaMnwyz7oeam8mUpdLoJoig_7Xg
@@ -240,9 +240,9 @@ use  katespadewechat
 		 
 		    交易记录
 				
-				select * from BusOrderDetail where SysUserInfoid=10163582     [BusProductId] >0 order by id desc
+				select * from BusOrderDetail where SysUserInfoid=510253977     [BusProductId] >0 order by id desc
 					
-				INSERT INTO [BusOrderDetail]( [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 9, 1, 500.0000, 500.0000, '2019-01-09 12:58:00.000', 14, 510253977, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', 66.1100, N'', N'KSS02803', N'00006958', .0000, N'', N'', 0, NULL);
+				INSERT INTO [BusOrderDetail]( [BusProductId], [Quantity], [Price], [Total], [TransactionTime], [WXShopId], [SysUserInfoId], [CreateId], [CreateTime], [UpdateId], [UpdateTime], [BatchNumber], [BusOrderDetailImportId], [UniqueNumber], [Remark], [DiscountAmount], [StyleSize], [ShopCode], [OrderNo], [OriginalPrice], [DiscountCode], [DiscountDesc], [Point], [PointExpiredDate]) VALUES ( 9, 1, 500.0000, 500.0000, '2019-01-09 12:58:00.000', 14, 510253977, 0, '2019-02-03 02:00:27.963', 0, '2019-02-03 02:00:27.963', N'20180130090204878', 7666431, N'KSS02110000069581', N'', 66.1100, N'', N'KSS02803', N'00006958', .0000, N'', N'', 0, NULL)
 
 				select top 100 * from BusProduct order by id 
 				

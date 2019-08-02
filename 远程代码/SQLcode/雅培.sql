@@ -247,4 +247,7 @@ log日志
 
 select top 10 * from logapi
 
+雅培后台二维码
+
+select   WXSourceid,ticket from WXQRCodeLimit where WXSourceid <401 and WXSourceid >0  ORDER BY id desc
 

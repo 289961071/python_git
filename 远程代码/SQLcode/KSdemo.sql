@@ -42,5 +42,13 @@ select  id,openid,unionid,mobile,CreateDate,* from sysuserinfo where   Mobile in
 
 select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,SubscribeTime,* from WXFans where openid='oIH_StwDfoTkC0fO1j5nKgwmJCnA'
 
+select  w.createtime,s.mobile from WXTemplateMsgSend w, sysuserinfo s 
+        where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-07-30 23:59:00' 
+        and w.FansOpenId=s.openid order by w.id
+
+select DISTINCT s.Mobile,b.openid from BusCoupon b,sysuserinfo s where s.id=b.SysUserInfoId and b.sendtime>'2019-07-31' and 
+b.CardCategoryName in ('新VIP生日礼券礼盒','新VIP生日礼券') 
+
+
 
 
