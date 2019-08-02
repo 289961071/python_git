@@ -37,10 +37,10 @@ in (
 )
 
 
-select  id,openid,unionid,mobile,CreateDate,* from sysuserinfo where   Mobile in ('18615705957')
+select  id,openid,unionid,mobile,CreateDate,* from sysuserinfo where   Mobile in ('13780464818')
 
 
-select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,SubscribeTime,* from WXFans where openid='oIH_StwDfoTkC0fO1j5nKgwmJCnA'
+select openid,sourceid,LastScanSourceId ,nickname,createtime,updatetime,SubscribeTime,* from WXFans where openid='oIH_St41DTzOFczwa8em-ZF9b4AU'
 
 select  w.createtime,s.mobile from WXTemplateMsgSend w, sysuserinfo s 
         where w.WXTemplateMsgInfoid=9 and w.createtime > '2019-07-30 23:59:00' 

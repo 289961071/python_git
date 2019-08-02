@@ -6,7 +6,7 @@
 
 		SELECT * FROM WXShop where datatype=3
 		
-		select * from CRMUser where mobile='13817187785'
+		select * from CRMUser where mobile='17788031539'
 		
 	短信接口
 	
@@ -250,4 +250,35 @@ select top 10 * from logapi
 雅培后台二维码
 
 select   WXSourceid,ticket from WXQRCodeLimit where WXSourceid <401 and WXSourceid >0  ORDER BY id desc
+
+		select top 10 * from WXFans where nickname='那路逗'    --   ol56vw0RHmt_ryOuwWZtmlHaGQwg
+
+
+select top 500 * from WXMessageRecord where FromUserName='ol56vw0RHmt_ryOuwWZtmlHaGQwg' order by id desc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
